@@ -1,7 +1,31 @@
 
-    <div class="navbar">
-        <a href=#>Home</a>
-        <a href=#>Upcoming movies</a>
-        <a href=#>My movies</a>
-        <a  href=# class="right">My profile</a>
-    </div> 
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+                          <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+                        </button>
+                        <a routerLink="/" class="navbar-brand">Cinem8</a>
+                      </div>
+                      <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../upcoming-movies/upcoming-movies.component.html">Upcoming movies</a></li>
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" role="button">My Movies<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href='#'>Watchlist</a></li>
+                                <li><a href="#">My movies</a></li>
+                            </ul>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" role="button">Profile<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href='#'>Contact</a></li>
+                            <li><a href="#">Profile settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
