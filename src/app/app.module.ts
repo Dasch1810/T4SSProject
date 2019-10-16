@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { HomeComponent } from './home/home.component';
-import { UpcomingMoviesComponent } from './upcoming-movies/upcoming-movies.component';
-import { MyMoviesComponent } from './my-movies/my-movies.component';
+import { MovieComponent } from './movie/movie.component';
+import { MyListComponent } from './movie/my-list/my-list.component' 
 import { MyProfileComponent } from './my-profile/my-profile.component';
-import { WatchlistComponent } from './my-movies/watchlist/watchlist.component';
-import { MyListComponent } from './my-movies/my-list/my-list.component';
+import { UpcomingMoviesComponent } from './movie/upcoming-movies/upcoming-movies.component';
+import { WatchlistComponent } from './movie/watchlist/watchlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -17,15 +21,19 @@ import { MyListComponent } from './my-movies/my-list/my-list.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    UpcomingMoviesComponent,
-    MyMoviesComponent,
     MyProfileComponent,
-    WatchlistComponent,
-    MyListComponent
+    MovieComponent,
+    MyListComponent,
+    UpcomingMoviesComponent,
+    WatchlistComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
