@@ -10,7 +10,7 @@
                       <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
                 <ul class="nav navbar-nav">
                     <li><a href="../../upcoming-movies/upcoming-movies.component.html">Upcoming movies</a></li>
-                    <li class="dropdown">
+                    <li class="dropdown" appDropdown>
                             <a href="#" class="dropdown-toggle" role="button">My Movies<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href='#'>Watchlist</a></li>
@@ -18,7 +18,7 @@
                             </ul>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
+                    <li class="dropdown" appDropdown>
                         <a href="#" class="dropdown-toggle" role="button">Profile<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href='#'>Contact</a></li>

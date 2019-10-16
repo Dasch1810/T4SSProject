@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-xs-12">
         <img 
         [src]="movie.imagePath" 
@@ -6,6 +6,11 @@
         class="img-responsive"
         style="max-height: 500px"
         style="margin: 0 auto">
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-xs-12">
+        <app-movie-trailer></app-movie-trailer>
     </div>
 </div>
 <div class="row">
@@ -15,7 +20,8 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
+        <div class="btn-group"
+        appDropdown>
             <button 
             type="button" 
             class="btn btn-primary">
@@ -24,7 +30,7 @@
         <ul class="dropdown-menu">
             <li><a href="#">Kinepolis Hasselt</a></li>
             <li><a href="#">Euroscoop Genk</a></li>
-            <li><a href="#">Andere bioscoop</a></li>
+            <li><a href="#">Other theatres</a></li>
         </ul>
         </div>
     </div>

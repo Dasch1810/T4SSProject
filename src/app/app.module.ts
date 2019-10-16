@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
 import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
+import { DropdownDirective } from './movie/shared/dropdown.directive';
+import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie-trailer.component';
 
 
 
@@ -27,7 +29,9 @@ import { MovieDetailsComponent } from './movie/movie-details/movie-details.compo
     MyListComponent,
     UpcomingMoviesComponent,
     WatchlistComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    DropdownDirective,
+    MovieTrailerComponent
 
   ],
   imports: [
