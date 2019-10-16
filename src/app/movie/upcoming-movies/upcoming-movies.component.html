@@ -9,10 +9,13 @@
         >
             <div class="pull-left">
                 <h4 cass="list-group-item-heading">{{movie.name}}</h4>
-                <p class="list-group-item-text"> Genre: {{movie.genre}}</p>
-                <p class="list-group-item-text"> Release Date: {{movie.releaseDate}}</p>
+                <p class="list-group-item-text"> <b>Genre:</b> {{movie.genre}}</p>
+                <p class="list-group-item-text"> <b>Release Date:</b> {{movie.releaseDate}}</p>
                 <button mat-button>
-                    <mat-icon (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">{{this.movie.addedToWatchList? "favorite": "favorite_border"}}</mat-icon>
+                    <mat-icon 
+                    (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">
+                    {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
+                    </mat-icon>
                 </button>
             </div>
             <span class="pull-right">
