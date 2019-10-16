@@ -13,6 +13,7 @@ import { WatchlistComponent } from './movie/watchlist/watchlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
+import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
 
 
 
@@ -25,7 +26,8 @@ import { MatButtonModule } from '@angular/material/button';
     MovieComponent,
     MyListComponent,
     UpcomingMoviesComponent,
-    WatchlistComponent
+    WatchlistComponent,
+    MovieDetailsComponent
 
   ],
   imports: [

@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img 
+        [src]="movie.imagePath" 
+        alt="{{movie.name}}" 
+        class="img-responsive"
+        style="max-height: 500px"
+        style="margin: 0 auto">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{movie.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group">
+            <button 
+            type="button" 
+            class="btn btn-primary">
+            Tickets<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Kinepolis Hasselt</a></li>
+            <li><a href="#">Euroscoop Genk</a></li>
+            <li><a href="#">Andere bioscoop</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        Genre :{{movie.genre}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        Release Date :{{movie.releaseDate}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        Details...
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Movie } from '../movie.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { Movie } from '../movie.model';
   styleUrls: ['./upcoming-movies.component.css']
 })
 export class UpcomingMoviesComponent implements OnInit {
-  
+  @Output() movieSelected =  new EventEmitter<Movie>();
   movies: Movie[] =  [
     new Movie('Joker',
     'Drama',
@@ -20,7 +20,10 @@ export class UpcomingMoviesComponent implements OnInit {
     'https://cdn.cinematerial.com/p/500x/u9juzjtv/joker-movie-poster.jpg?v=1567014206',
     false)
   ];
-
+  
+onSelected(movie:Movie){
+this.movieSelected.emit(movie);
+}
   
   constructor() { }
   ngOnInit() {
