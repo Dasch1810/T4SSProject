@@ -7,6 +7,7 @@ import { Movie } from '../movie.model';
   styleUrls: ['./upcoming-movies.component.css']
 })
 export class UpcomingMoviesComponent implements OnInit {
+  title: String = "Upcoming Movies"
   @Output() movieSelected =  new EventEmitter<Movie>();
   movies: Movie[] =  [
     new Movie('Joker',
