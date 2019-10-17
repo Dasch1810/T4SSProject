@@ -9,7 +9,12 @@ import { Movie } from '../movie.model';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
+  trailerShown:boolean = false;
+  toggleButton: string= "Show"
   @Input() movie: Movie;
+  showTrailer(){
+    this.trailerShown= !this.trailerShown;
+  }
   constructor() { }
 
   ngOnInit() {
