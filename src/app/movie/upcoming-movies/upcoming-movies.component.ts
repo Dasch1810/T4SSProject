@@ -14,14 +14,19 @@ export class UpcomingMoviesComponent implements OnInit {
     '3/10/2019', 
     'https://cdn.cinematerial.com/p/500x/u9juzjtv/joker-movie-poster.jpg?v=1567014206',
     'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker"',
-    true),
+    true,
+    'https://www.youtube.com/embed/zAGVQLHvwOY'),
+
     new Movie('Joker2',
     'Comedy',
     '4/20/2069',
     'https://cdn.cinematerial.com/p/500x/u9juzjtv/joker-movie-poster.jpg?v=1567014206',
     'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker"',
-    false)
+    false,
+    'https://www.youtube.com/embed/zAGVQLHvwOY')
   ];
+  
+  
   
 onSelected(movie:Movie){
 this.movieSelected.emit(movie);
