@@ -39,7 +39,8 @@ import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

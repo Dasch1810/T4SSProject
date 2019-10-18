@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-list.component.css']
 })
 export class MyListComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
-
 }

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-5">
         <app-upcoming-movies
-        (movieSelected)="selectedMovie = $event"></app-upcoming-movies>
+        (movieSelected)="movieSelect($event)"></app-upcoming-movies>
     </div>
     <div class="col-md-7">
         <app-movie-details

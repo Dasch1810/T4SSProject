@@ -6,7 +6,7 @@ export class Movie {
     public description: string;
     public addedToWatchList: boolean;
     public trailerUrl : string;
-
+    
     constructor(name: string,
         genre: string,
         releaseDate: string|Date,

@@ -7,7 +7,11 @@ import { Movie } from './movie.model';
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent implements OnInit {
-  selectedMovie: Movie;
+  public selectedMovie: Movie;
+
+  movieSelect(movie: Movie){
+    this.selectedMovie = movie;
+  }
   constructor() { }
 
   ngOnInit() {

@@ -8,15 +8,12 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./movie-trailer.component.css']
 })
 
-export class MovieTrailerComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
-  }
-  
+export class MovieTrailerComponent {
   public safeURL: SafeResourceUrl;
   constructor(private _sanitizer: DomSanitizer) { 
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/zAGVQLHvwOY');
     }
+  
   
 }
 

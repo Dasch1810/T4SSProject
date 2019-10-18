@@ -12,6 +12,7 @@ export class MovieDetailsComponent implements OnInit {
   trailerShown:boolean = false;
   toggleButton: string= "Show"
   @Input() movie: Movie;
+
   showTrailer(){
     this.trailerShown= !this.trailerShown;
   }

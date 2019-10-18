@@ -5,24 +5,24 @@
                         <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
                           <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
                         </button>
-                        <a routerLink="/" class="navbar-brand">Cinem8</a>
+                        <a routerLink="/home" class="navbar-brand">Cinem8</a>
                       </div>
                       <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
                 <ul class="nav navbar-nav">
-                    <li><a href="../../upcoming-movies/upcoming-movies.component.html">Upcoming movies</a></li>
-                    <li class="dropdown" appDropdown>
-                            <a href="#" class="dropdown-toggle" role="button">My Movies<span class="caret"></span></a>
+                    <li routerLinkActive ="active"><a routerLink="upcoming-movies">Upcoming movies</a></li>
+                    <li routerLinkActive ="active" class="dropdown" appDropdown>
+                            <a class="dropdown-toggle" role="button">My Movies<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href='#'>Watchlist</a></li>
-                                <li><a href="#">My movies</a></li>
+                                <li><a routerLink="watchlist">Watchlist</a></li>
+                                <li><a routerLink="my-list">My movies</a></li>
                             </ul>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown" appDropdown>
-                        <a href="#" class="dropdown-toggle" role="button">Profile<span class="caret"></span></a>
+                        <a class="dropdown-toggle" role="button">Profile<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href='#'>Contact</a></li>
-                            <li><a href="#">Profile settings</a></li>
+                            <li><a routerLink="contact">Contact</a></li>
+                            <li><a routerLink="my-profile">Profile settings</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -8,6 +8,7 @@ import { Movie } from '../movie.model';
 })
 export class UpcomingMoviesComponent implements OnInit {
   title: String = "Upcoming Movies"
+  detailsShown: boolean = false;
   @Output() movieSelected =  new EventEmitter<Movie>();
   movies: Movie[] =  [
     new Movie('Joker',
@@ -27,12 +28,20 @@ export class UpcomingMoviesComponent implements OnInit {
     'https://www.youtube.com/embed/zAGVQLHvwOY')
   ];
   
+  toggleDetails(){
+    this.detailsShown = !this.detailsShown;
+  }
   
-  
-onSelected(movie:Movie){
-this.movieSelected.emit(movie);
-}
-  
+ onSelect(movie:Movie): void{
+ this.movieSelected.emit(movie);
+ if (this.showOrHide === "show"){
+   this.showOrHide = "hide"
+ }
+ else if(this.showOrHide === "hide"){
+   this.showOrHide = "show"
+ }
+ }
+  showOrHide: string = "show"
   constructor() { }
   ngOnInit() {
   }
