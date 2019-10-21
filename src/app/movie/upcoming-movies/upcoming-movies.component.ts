@@ -1,39 +1,26 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Movie } from '../movie.model';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-upcoming-movies',
   templateUrl: './upcoming-movies.component.html',
-  styleUrls: ['./upcoming-movies.component.css']
+  styleUrls: ['./upcoming-movies.component.css'],
+  providers: [MovieService]
 })
 export class UpcomingMoviesComponent implements OnInit {
+  @Input() movie: Movie;
   title: String = "Upcoming Movies"
   detailsShown: boolean = false;
-  @Output() movieSelected =  new EventEmitter<Movie>();
-  movies: Movie[] =  [
-    new Movie('Joker',
-    'Drama',
-    '3/10/2019', 
-    'https://cdn.cinematerial.com/p/500x/u9juzjtv/joker-movie-poster.jpg?v=1567014206',
-    'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker"',
-    true,
-    'https://www.youtube.com/embed/zAGVQLHvwOY'),
-
-    new Movie('Joker2',
-    'Comedy',
-    '4/20/2069',
-    'https://cdn.cinematerial.com/p/500x/u9juzjtv/joker-movie-poster.jpg?v=1567014206',
-    'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker"',
-    false,
-    'https://www.youtube.com/embed/zAGVQLHvwOY')
-  ];
+  showOrHide: string = "show"
+  movies: Movie[] =  [];
   
   toggleDetails(){
     this.detailsShown = !this.detailsShown;
   }
   
- onSelect(movie:Movie): void{
- this.movieSelected.emit(movie);
+ onSelected(){
+ this.movieService.movieSelected.emit(this.movie);
  if (this.showOrHide === "show"){
    this.showOrHide = "hide"
  }
@@ -41,9 +28,10 @@ export class UpcomingMoviesComponent implements OnInit {
    this.showOrHide = "show"
  }
  }
-  showOrHide: string = "show"
-  constructor() { }
+
+  constructor(private movieService: MovieService) { }
   ngOnInit() {
+    this.movies = this.movieService.getMovies();
   }
 
 }

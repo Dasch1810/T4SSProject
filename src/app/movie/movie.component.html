@@ -1,16 +1,15 @@
 <div class="row">
     <div class="col-md-5">
-        <app-upcoming-movies
-        (movieSelected)="movieSelect($event)"></app-upcoming-movies>
+        <app-upcoming-movies></app-upcoming-movies>
     </div>
-    <div class="col-md-7">
+    <!-- <div class="col-md-7">
         <app-movie-details
         *ngIf="selectedMovie; else infoText"
         [movie]="selectedMovie"></app-movie-details>
         <ng-template #infoText>
             <p>Please select a movie</p>
         </ng-template>
-    </div>
+    </div> -->
 </div>
 
 

@@ -4,19 +4,26 @@
         <a 
         class="list-group-item clearfix"
         *ngFor="let movie of movies"
-        (click)="onSelect(movie)"
+        (click)="onSelected()"
         >
             <div class="pull-left">
                 <h4 cass="list-group-item-heading">{{movie.name}}</h4>
                 <p class="list-group-item-text"> <b>Genre:</b> {{movie.genre}}</p>
                 <p class="list-group-item-text"> <b>Release Date:</b> {{movie.releaseDate}}</p>
                 <p class="list-group-item-text">
+                        <button class="btn btn-succes">
+                            <a [routerLink]="['/movie-details', movie.name]">
+                                Go to details
+                            </a>
+                        </button>
+                </p>
+                <!-- <p class="list-group-item-text">
                         <a  (click)=toggleDetails()> {{ showOrHide }} details<span class="caret"></span></a>
                     <app-movie-details
                         [movie]='movie'
                         *ngIf= "detailsShown">
-                    </app-movie-details>
-                    </div>
+                    </app-movie-details> -->
+    </div>
                     
             <span class="pull-right">
                 <img [src]="movie.imagePath"
