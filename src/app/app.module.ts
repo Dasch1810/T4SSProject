@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
 import { DropdownDirective } from './movie/shared/dropdown.directive';
 import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie-trailer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -31,7 +32,8 @@ import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie
     WatchlistComponent,
     MovieDetailsComponent,
     DropdownDirective,
-    MovieTrailerComponent
+    MovieTrailerComponent,
+    ContactUsComponent
 
   ],
   imports: [

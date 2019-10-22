@@ -13,10 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
   trailerShown:boolean = false;
-  toggleButton: string= "Show"
   movies: Movie[];
   movie: Movie;
-  @Input() selectedMovie: Movie;
 
   showTrailer(){
     this.trailerShown= !this.trailerShown;
@@ -25,7 +23,7 @@ export class MovieDetailsComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    var name ="error"
+    var name="Something has gone wrong"
     this.route.params.subscribe(params => name = params.name);
    
     this.movie = this.movieService.getMovieByName(name)
