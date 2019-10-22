@@ -14,20 +14,6 @@ export class UpcomingMoviesComponent implements OnInit {
   detailsShown: boolean = false;
   showOrHide: string = "show"
   movies: Movie[] =  [];
-  
-  toggleDetails(){
-    this.detailsShown = !this.detailsShown;
-  }
-  
- onSelected(){
- this.movieService.movieSelected.emit(this.movie);
- if (this.showOrHide === "show"){
-   this.showOrHide = "hide"
- }
- else if(this.showOrHide === "hide"){
-   this.showOrHide = "show"
- }
- }
 
   constructor(private movieService: MovieService) { }
   ngOnInit() {

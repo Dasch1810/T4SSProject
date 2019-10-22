@@ -14,13 +14,15 @@
 <div class="row">
     <div class="col-xs-12">
         <app-movie-trailer
-        *ngIf= "trailerShown; else showButton">
+        *ngIf= "trailerShown; else showButton"
+        [movie]="movie">
     </app-movie-trailer>
         <ng-template #showButton>
     <button class="btn btn-primary" (click)=showTrailer()>Show trailer</button>
         </ng-template>
     </div>
 </div>
+
 <div class="row">
     <div class="col-xs-12">
         <h1>{{movie.name}}</h1>
@@ -36,9 +38,9 @@
             Tickets<span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            <li><a href="#">Kinepolis Hasselt</a></li>
-            <li><a href="#">Euroscoop Genk</a></li>
-            <li><a href="#">Other theatres</a></li>
+            <li><a href="https://kinepolis.be/nl/bioscopen/kinepolis-hasselt?main-section=presales">Kinepolis Hasselt</a></li>
+            <li><a href="https://www.euroscoop.be/genk/">Euroscoop Genk</a></li>
+            <li><a href="https://www.google.com/maps/search/bioscoop/@50.9631334,5.229416,11z/data=!3m1!4b1">Other theatres</a></li>
         </ul>
         </div>
     </div>
@@ -73,5 +75,4 @@
                     {{movie.description}}
                 </div>
             </div>
-
         </div>

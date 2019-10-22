@@ -4,7 +4,6 @@
         <a 
         class="list-group-item clearfix"
         *ngFor="let movie of movies"
-        (click)="onSelected()"
         >
             <div class="pull-left">
                 <h4 cass="list-group-item-heading">{{movie.name}}</h4>
@@ -17,12 +16,7 @@
                             </a>
                         </button>
                 </p>
-                <!-- <p class="list-group-item-text">
-                        <a  (click)=toggleDetails()> {{ showOrHide }} details<span class="caret"></span></a>
-                    <app-movie-details
-                        [movie]='movie'
-                        *ngIf= "detailsShown">
-                    </app-movie-details> -->
+
     </div>
                     
             <span class="pull-right">
