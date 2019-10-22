@@ -8,7 +8,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch:'full'},
+  {path: '', redirectTo: 'login', pathMatch:'full'},
   {path:'upcoming-movies',component: UpcomingMoviesComponent},
   {path: 'my-list', component: MyListComponent},
   {path: 'movie-details/:name', component: MovieDetailsComponent,pathMatch: 'full'},
