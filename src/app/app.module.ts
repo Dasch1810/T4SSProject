@@ -18,8 +18,8 @@ import { DropdownDirective } from './movie/shared/dropdown.directive';
 import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie-trailer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
-import { WatchlistPipe } from './movie/watchlist.pipe';
-import { MylistPipe } from './movie/mylist.pipe';
+import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
+import { MylistPipe } from './movie/pipes/mylist.pipe';
 
 
 

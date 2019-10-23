@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Movie } from '../../movie.model';
-import { MovieService } from '../../movie.service';
 
 
 @Component({
