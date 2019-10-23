@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input,} from '@angular/core';
+import { MovieService } from '../movie.service';
+import { Movie } from '../movie.model';
+
+
 
 @Component({
   selector: 'app-my-list',
   templateUrl: './my-list.component.html',
-  styleUrls: ['./my-list.component.css']
+  styleUrls: ['./my-list.component.css'],
+  providers: [MovieService]
 })
 export class MyListComponent implements OnInit {
+  movies: Movie[] = [];
+  @Input() movie: Movie;
   
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    
+    this.movies = this.movieService.getMovies()
   }
 }

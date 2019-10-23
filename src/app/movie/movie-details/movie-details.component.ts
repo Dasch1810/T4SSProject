@@ -15,8 +15,7 @@ export class MovieDetailsComponent implements OnInit {
   trailerShown:boolean = false;
   movies: Movie[];
   movie: Movie;
-
-
+  @Input() watchList: Movie[];
   showTrailer(){
     this.trailerShown= !this.trailerShown;
   }

@@ -17,6 +17,9 @@ import { MovieDetailsComponent } from './movie/movie-details/movie-details.compo
 import { DropdownDirective } from './movie/shared/dropdown.directive';
 import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie-trailer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutComponent } from './about/about.component';
+import { WatchlistPipe } from './movie/watchlist.pipe';
+import { MylistPipe } from './movie/mylist.pipe';
 
 
 
@@ -33,7 +36,11 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MovieDetailsComponent,
     DropdownDirective,
     MovieTrailerComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutComponent,
+    WatchlistPipe,
+    MylistPipe,
+    
 
   ],
   imports: [
@@ -43,6 +50,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatIconModule,
     MatButtonModule,
     AppRoutingModule
+  ],
+  exports: [
+    WatchlistPipe
   ],
   providers: [],
   bootstrap: [AppComponent]

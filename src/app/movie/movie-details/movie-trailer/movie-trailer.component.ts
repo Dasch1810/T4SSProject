@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Movie } from '../../movie.model';
+import { MovieService } from '../../movie.service';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class MovieTrailerComponent {
   constructor(private _sanitizer: DomSanitizer) { 
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/zAGVQLHvwOY');
     } 
+    
 }
 
 

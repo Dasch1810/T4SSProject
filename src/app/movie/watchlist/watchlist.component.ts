@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../movie.model';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-watchlist',
   templateUrl: './watchlist.component.html',
-  styleUrls: ['./watchlist.component.css']
+  styleUrls: ['./watchlist.component.css'],
+  providers: [MovieService]
 })
 export class WatchlistComponent implements OnInit {
-  watchlist: Movie[] = [];
-  
-  constructor() { }
+  @Input() movie: Movie;
+  movies: Movie[] = [];
+
+  constructor(private movieService: MovieService){}
   
   ngOnInit() {
-    
+    this.movies = this.movieService.getMovies();
   }
   
 }

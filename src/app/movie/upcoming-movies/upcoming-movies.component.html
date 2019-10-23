@@ -27,7 +27,7 @@
 <div class="row">
                 <button mat-button>
                     <mat-icon 
-                    (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList;addToWatchlist(this.movie)">
+                    (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList; log(this.movie.addedToWatchList)">
                     {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
                     </mat-icon>
                 </button>

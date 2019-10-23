@@ -12,7 +12,7 @@ export class MovieService {
         'https://cdn.cinematerial.com/p/500x/u9juzjtv/joker-movie-poster.jpg?v=1567014206',
         'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker"',
         true,
-        true,
+        false,
         'https://www.youtube.com/embed/zAGVQLHvwOY'),
     
         new Movie('Gemini man',
@@ -21,7 +21,7 @@ export class MovieService {
         'https://i.iheart.com/v3/re/new_assets/5d8e12dc453ebf2886e79408?ops=max(650,0),quality(80)',
         'An over-the-hill hitman faces off against a younger clone of himself.',
         false,
-        false,
+        true,
         'https://www.youtube.com/embed/AbyJignbSj0'),
       ];
 
