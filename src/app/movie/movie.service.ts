@@ -26,7 +26,7 @@ export class MovieService {
       ];
 
       getMovies(){
-          return this.movies.slice();
+          return this.movies;
       }
       getMovieByName(name: String){
         return this.movies.find(m => m.name === name)

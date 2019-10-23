@@ -1,9 +1,11 @@
 <H1> {{title}} </H1>
 <div class="row">
     <div class="col-xs-12">
+        <p class="list-group-item-text"><b>Find movie: </b><input type="text" [(ngModel)]="filteredStatus"></p>
+        <hr>
         <a 
         class="list-group-item clearfix"
-        *ngFor="let movie of movies"
+        *ngFor="let movie of movies | filter:filteredStatus:'name'"
         >
             <div class="pull-left">
                 <h4 cass="list-group-item-heading">{{movie.name}}</h4>

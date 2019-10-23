@@ -14,7 +14,7 @@ export class UpcomingMoviesComponent implements OnInit {
   detailsShown: boolean = false;
   showOrHide: string = "show"
   movies: Movie[] =  [];
-
+  filteredStatus = '';
   constructor(private movieService: MovieService) { }
   
   ngOnInit() {

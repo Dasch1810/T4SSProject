@@ -20,6 +20,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
 import { MylistPipe } from './movie/pipes/mylist.pipe';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './movie/pipes/filter.pipe';
 
 
 
@@ -40,6 +42,7 @@ import { MylistPipe } from './movie/pipes/mylist.pipe';
     AboutComponent,
     WatchlistPipe,
     MylistPipe,
+    FilterPipe,
     
 
   ],
@@ -49,7 +52,8 @@ import { MylistPipe } from './movie/pipes/mylist.pipe';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     WatchlistPipe
