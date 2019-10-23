@@ -23,13 +23,21 @@
                 <img [src]="movie.imagePath"
                 alt="{{ movie.name }}"
                 class="img-responsive" 
-                style="max-height: 100px;">
+                style="max-height: 150px;">
+<div class="row">
                 <button mat-button>
                     <mat-icon 
-                    (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">
+                    (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList;addToWatchlist(this.movie)">
                     {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
                     </mat-icon>
                 </button>
+                <button mat-button>
+                        <mat-icon 
+                        (click)="this.movie.seen= !this.movie.seen">
+                        {{this.movie.seen? "visibility": "visibility_off"}}
+                        </mat-icon>
+                    </button>
+                </div>
             </span>
         </a>
     </div>

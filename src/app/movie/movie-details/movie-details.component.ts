@@ -16,6 +16,7 @@ export class MovieDetailsComponent implements OnInit {
   movies: Movie[];
   movie: Movie;
 
+
   showTrailer(){
     this.trailerShown= !this.trailerShown;
   }
