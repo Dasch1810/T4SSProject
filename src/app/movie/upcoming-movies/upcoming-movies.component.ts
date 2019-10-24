@@ -6,7 +6,6 @@ import { MovieService } from '../movie.service';
   selector: 'app-upcoming-movies',
   templateUrl: './upcoming-movies.component.html',
   styleUrls: ['./upcoming-movies.component.css'],
-  providers: [MovieService]
 })
 export class UpcomingMoviesComponent implements OnInit {
   @Input() movie: Movie;

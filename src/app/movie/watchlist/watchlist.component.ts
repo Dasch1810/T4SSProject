@@ -6,7 +6,6 @@ import { MovieService } from '../movie.service';
   selector: 'app-watchlist',
   templateUrl: './watchlist.component.html',
   styleUrls: ['./watchlist.component.css'],
-  providers: [MovieService]
 })
 export class WatchlistComponent implements OnInit {
   @Input() movie: Movie;

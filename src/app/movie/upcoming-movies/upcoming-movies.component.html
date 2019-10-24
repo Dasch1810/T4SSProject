@@ -1,9 +1,45 @@
 <H1> {{title}} </H1>
-<div class="row">
-    <div class="col-xs-12">
         <p class="list-group-item-text"><b>Find movie: </b><input type="text" [(ngModel)]="filteredStatus"></p>
         <hr>
-        <a 
+    <div class="card-deck"
+    *ngFor="let movie of movies | filter:filteredStatus:'name'">
+    <div class="col-xs-4">
+        <div class="card">
+          <img class="card-img-top img-responsive"
+          style="max-height: 400px; cursor: pointer"
+           [src]='movie.imagePath'
+            alt={{movie.name}}
+            [routerLink]="['/movie-details', movie.name]">
+          <div class="card-body">
+            <h4 class="card-title">{{movie.name}}
+                <span>
+                    <button mat-button>
+                        <mat-icon 
+                        (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">
+                        {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
+                        </mat-icon>
+                    </button>
+                    <button mat-button>
+                            <mat-icon 
+                            (click)="this.movie.seen= !this.movie.seen">
+                            {{this.movie.seen? "visibility": "visibility_off"}}
+                            </mat-icon>
+                        </button>
+                </span>
+            </h4>
+            <p class="card-text"><b>Release Date: </b>{{movie.releaseDate}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><b>Genre: </b>{{movie.genre}}
+        </small>           
+          </div>
+        </div>
+
+
+<!--         
+        <div class="row card-group"
+        >
+        <div class="col-xs-4"
         class="list-group-item clearfix"
         *ngFor="let movie of movies | filter:filteredStatus:'name'"
         >
@@ -26,7 +62,6 @@
                 alt="{{ movie.name }}"
                 class="img-responsive" 
                 style="max-height: 150px;">
-<div class="row">
                 <button mat-button>
                     <mat-icon 
                     (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">
@@ -39,9 +74,7 @@
                         {{this.movie.seen? "visibility": "visibility_off"}}
                         </mat-icon>
                     </button>
-                </div>
             </span>
-        </a>
-    </div>
-</div>
-<hr>
+        </div>
+        </div>
+ -->

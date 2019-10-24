@@ -22,6 +22,7 @@ import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
 import { MylistPipe } from './movie/pipes/mylist.pipe';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './movie/pipes/filter.pipe';
+import { MovieService } from './movie/movie.service';
 
 
 
@@ -58,7 +59,7 @@ import { FilterPipe } from './movie/pipes/filter.pipe';
   exports: [
     WatchlistPipe
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

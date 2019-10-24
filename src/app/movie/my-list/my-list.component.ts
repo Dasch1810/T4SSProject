@@ -8,7 +8,6 @@ import { Movie } from '../movie.model';
   selector: 'app-my-list',
   templateUrl: './my-list.component.html',
   styleUrls: ['./my-list.component.css'],
-  providers: [MovieService]
 })
 export class MyListComponent implements OnInit {
   movies: Movie[] = [];

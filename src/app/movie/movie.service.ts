@@ -1,10 +1,8 @@
 import { Movie } from './movie.model';
 import { EventEmitter } from '@angular/core';
-import { WatchlistComponent } from './watchlist/watchlist.component';
 
 export class MovieService {
     movieSelected =  new EventEmitter<Movie>();
-    private watchList: Movie[] = [];
     private movies: Movie[] =  [
         new Movie('Joker',
         'Drama',
@@ -23,6 +21,26 @@ export class MovieService {
         false,
         true,
         'https://www.youtube.com/embed/AbyJignbSj0'),
+        new Movie(
+            'Doctor Sleep',
+            'Horror',
+            '31/10/2019',
+            'https://m.media-amazon.com/images/M/MV5BYmY3NGJlYTItYmQ4OS00ZTEwLWIzODItMjMzNWU2MDE0NjZhXkEyXkFqcGdeQXVyMzQzMDA3MTI@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            "Still irrevocably scarred by the trauma he endured as a child at the Overlook, Dan Torrance has fought to find some semblance of peace. But that peace is shattered when he encounters Abra, a courageous teenager with her own powerful extrasensory gift, known as the 'shine.' Instinctively recognizing that Dan shares her power, Abra has sought him out, desperate for his help against the merciless Rose the Hat and her followers, The True Knot, who feed off the shine of innocents in their quest for immortality. Forming an unlikely alliance, Dan and Abra engage in a brutal life-or-death battle with Rose. Abra's innocence and fearless embrace of her shine compel Dan to call upon his own powers as never before—at once facing his fears and reawakening the ghosts of the past.",
+            false,
+            true,
+            'https://www.youtube.com/embed/2msJTFvhkU4'
+        ),
+        new Movie(
+            'Frozen 2',
+            'Fantasy',
+            '22/11/2019',
+            'https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SY1000_SX675_AL_.jpg',
+            "Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land. They set out to find the origin of Elsa's powers in order to save their kingdom.",
+            true,
+            true,
+            'https://www.youtube.com/embed/Zi4LMpSDccc'
+        )
       ];
 
       getMovies(){
