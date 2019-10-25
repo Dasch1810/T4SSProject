@@ -1,1 +1,58 @@
-<p>contact-us works!</p>
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+		
+		<div class="form-row">
+			<div class="form-group col">
+				<label>Title</label>
+					<select formControlName="title" class="form-control" [ngClass]="{'is-invalid': submitted && f.title.errors}">
+						<option value="blanc"> </option>
+						<option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+						<option value="Ms">Ms</option>
+						<option value="X">X</option>
+						<option value="SM">Super Man</option>
+						<option value="WW">Wonder Woman</option>
+						<option value="V">Villain</option>
+					</select>
+				<div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+					<div *ngIf="f.title.errors.required" class="text-danger">Title is required!</div>
+				</div>
+			 </div>
+			</div>
+            <div class="form-group">
+					<label>Your Name:</label>
+						<input type="text" class="form-control" formControlName="name" required minlength="3" maxlength="25" [ngClass]="{'is-invalid' : submitted && f.name.errors}"/>
+							<div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+								<div *ngIf="f.name.errors.required" class="text-danger">Name is required!</div>
+							</div>
+					</div>
+				<div class="form-group">
+					<label>Email:</label>
+						<input type="email" class="form-control" formControlName="email" required maxlength="30"  [ngClass]="{'is-invalid': submitted && f.email.errors}"/>
+						<div *ngIf="submitted && f.email.errors" class="invalid-feedback">	
+						<div *ngIf="f.email.errors.email">Email is required!
+						<div *ngIf="f.email.errors.required">Email must be a valid email adress!</div>
+					</div>
+				</div>
+				</div>
+				<div class="form-group">
+					<label>Subject:</label>
+						<input type="text" class="form-control" formControlName="subject" required minlength="3" maxlength="20" [ngClass]="{'is-valid': submitted && f.Subject.errors}"/>
+							<div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+								<div *ngIf="f.subject.errors.required">Subject is required!</div>
+							</div>
+				</div>
+				<div class="form-group">
+					<label>Message:</label>
+						<textarea rows="4" class="form-control" formControlName="message" minlength="3" maxlength="250" [ngClass]="{'is-invalid':submitted && f.message.errors}"></textarea>
+							<div *ngIf="submitted && f.message.errors" class="invlid-feedback">
+							<div *ngIf="f.message.required">Message is required!</div>
+					</div>
+                </div>
+                <div class="form-group">
+                        <button onsubmit="sendMessage()" type="submit" class="btn btn-primary btn-md">Send Message</button>
+							
+						<button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+							
+                </div>
+		</form>

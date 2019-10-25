@@ -1,0 +1,6 @@
+diff a/.gitignore b/.gitignore	(rejected hunks)
+@@ -2,3 +2,4 @@
+ ﻿node_modules
+ =======
+ node_modules
++>>>>>>> 6a4049bfab0c9da453adbe01b3a83d6eaaa8b82a

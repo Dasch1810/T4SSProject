@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
@@ -20,19 +20,19 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
 import { MylistPipe } from './movie/pipes/mylist.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
 import { RatingComponent } from './movie/my-list/rating/rating.component';
-import { AuthenticationService } from "./_services/AuthenticationService";
-import { AlertComponent } from './_components/alert.component';
-import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register';
 import { LoginComponent } from './login';
+import { AlertComponent } from './_components';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
     AppComponent,
     HeaderComponent,
     HomeComponent,
@@ -50,7 +50,9 @@ import { LoginComponent } from './login';
     MylistPipe,
     FilterPipe,
     RatingComponent,
-    AlertComponent,
+    RegisterComponent,
+    LoginComponent,
+    AlertComponent
     
 
   ],
@@ -62,14 +64,13 @@ import { LoginComponent } from './login';
     MatButtonModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     WatchlistPipe
-    
   ],
-  providers: [MovieService,HttpClient],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

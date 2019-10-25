@@ -10,23 +10,24 @@ import { Movie } from '../movie.model';
   styleUrls: ['./my-list.component.css'],
 })
 export class MyListComponent implements OnInit {
-  movies: Movie[] = [];
+  
   @Input() movie: Movie;
+
+  rating: number;
+  movies: Movie[];
   ratingClicked: number;
   movieNameRatingClicked: string;
+  wasRatingClicked:boolean = false;
   ratedMovie: Movie;
-  wasRatingClicked=false;
   
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    this.movies = this.movieService.getMovies()
+    this.movies = this.movieService.getMovies();
   }
-  ratingComponentClick(clickObj: any): void {
-    const ratedMovie = this.movies.find(((i: any) => i.name === clickObj.name));
-    if (!!this.movie) {
-      this.ratedMovie.rating = clickObj.rating;
+
+  ratingComponentClick(): void {
+      this.movie.rating = this.rating;
       this.wasRatingClicked= true;
-    }
   }
 }
