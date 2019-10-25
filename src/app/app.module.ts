@@ -60,8 +60,8 @@ import { AuthenticationService } from "./_services/AuthenticationService";
     FormsModule
   ],
   exports: [
-    WatchlistPipe,
-    AuthenticationService
+    WatchlistPipe
+    
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
