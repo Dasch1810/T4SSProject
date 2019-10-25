@@ -10,8 +10,6 @@ import { MovieService } from '../movie.service';
 export class UpcomingMoviesComponent implements OnInit {
   @Input() movie: Movie;
   title: String = "Upcoming Movies"
-  detailsShown: boolean = false;
-  showOrHide: string = "show"
   movies: Movie[] =  [];
   filteredStatus = '';
   constructor(private movieService: MovieService) { }

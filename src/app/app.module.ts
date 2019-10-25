@@ -23,6 +23,7 @@ import { MylistPipe } from './movie/pipes/mylist.pipe';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
+import { RatingComponent } from './movie/my-list/rating/rating.component';
 
 
 
@@ -44,6 +45,7 @@ import { MovieService } from './movie/movie.service';
     WatchlistPipe,
     MylistPipe,
     FilterPipe,
+    RatingComponent,
     
 
   ],

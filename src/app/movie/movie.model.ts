@@ -6,6 +6,7 @@ export class Movie {
     public description: string;
     public addedToWatchList: boolean;
     public seen: boolean;
+    public rating: number;
     public trailerUrl : string;
     
     constructor(name: string,
@@ -15,6 +16,7 @@ export class Movie {
         description: string,
         addedToWatchList: boolean,
         seen: boolean,
+        rating: number,
         trailerUrl: string)
     {
         this.name = name;
@@ -24,6 +26,7 @@ export class Movie {
         this.description= description;
         this.addedToWatchList= addedToWatchList;
         this.seen= seen;
+        this.rating = rating;
         this.trailerUrl= trailerUrl;
     }
 }

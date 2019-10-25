@@ -15,13 +15,9 @@ export class WatchlistComponent implements OnInit {
   constructor(private movieService: MovieService){}
   
   selectRandomMovie(){
-    this.randomMovie = this.movies[Math.floor(Math.random()*this.movies.length)];
-  }
-  goToSelectedRandomMovieDetails(){
-    console.log("hi")
+    this.randomMovie = this.movies[Math.floor(Math.random()*this.movies.length)]
   }
   ngOnInit() {
     this.movies = this.movieService.getMovies();
   }
-  
 }

@@ -1,22 +1,22 @@
-<button class="btn btn-primary"
-(click)="selectRandomMovie(movie)"
-*ngIf="!randomMovie; else suggestion">
-What should I watch today ?
-</button>
-<ng-template #suggestion>
-<p>How about : </p>
+    <button class="btn btn-primary"
+            (click)="selectRandomMovie(movie)"
+            *ngIf="!randomMovie; else suggestion">
+                What should I watch today ?
+    </button>
+    <ng-template #suggestion>
+    <p>How about : </p>
     <h1>{{randomMovie.name}} !</h1>
-<button class="btn btn-primary"
-(click)="selectRandomMovie(movie)">
-    Nah, try again
-</button>
-<button class="btn btn-primary"
-[routerLink]="['/movie-details', randomMovie.name]">
-Sounds good !
-</button>
-</ng-template>
-<hr>
-<a 
+    <button class="btn btn-primary"
+            (click)="selectRandomMovie(movie)">
+                Nah, try again
+    </button>
+    <button class="btn btn-primary"
+            [routerLink]="['/movie-details', randomMovie.name]">
+                Sounds good !
+    </button>
+    </ng-template>
+    <hr>
+<a
         class="list-group-item clearfix"
         *ngFor="let movie of movies | watchlist"
         >
@@ -31,4 +31,12 @@ Sounds good !
                     {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
                     </mat-icon>
                 </button>
+                <button mat-button>
+                    <mat-icon 
+                    (click)="this.movie.seen= !this.movie.seen">
+                    {{this.movie.seen? "visibility": "visibility_off"}}
+                    </mat-icon>
+                </button>
             </a>
+
+            
