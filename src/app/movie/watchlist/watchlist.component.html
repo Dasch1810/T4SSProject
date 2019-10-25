@@ -6,13 +6,13 @@
     <ng-template #suggestion>
     <p>How about : </p>
     <h1>{{randomMovie.name}} !</h1>
-    <button class="btn btn-primary"
+    <button class="btn btn-success"
+    [routerLink]="['/movie-details', randomMovie.name]">
+        Sounds good !
+    </button>   
+    <button class="btn btn-danger"
             (click)="selectRandomMovie(movie)">
                 Nah, try again
-    </button>
-    <button class="btn btn-primary"
-            [routerLink]="['/movie-details', randomMovie.name]">
-                Sounds good !
     </button>
     </ng-template>
     <hr>

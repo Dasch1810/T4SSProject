@@ -9,7 +9,7 @@ import { group } from '@angular/animations';
 })
 export class ContactUsComponent implements OnInit {
   reactiveForm: FormGroup;
-  submitted = false;
+  submitted:boolean = false;
   
   constructor(private formBuilder: FormBuilder) { }
   
