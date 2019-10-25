@@ -1,9 +1,64 @@
 <H1> {{title}} </H1>
 <div class="row">
     <div class="col-xs-12">
-        <a 
+        <p class="list-group-item-text"><b>Find movie: </b><input type="text" [(ngModel)]="filteredStatus" placeholder="Movie name">
+                <!-- <div class="btn-group"
+                appDropdown>
+                    <button 
+                    type="button" 
+                    class="btn btn-primary">
+                    Genre <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a>Action</a></li>
+                    <li><a>Horror</a></li>
+                    <li><a>Fantasy</a></li>
+                </ul>
+                </div> -->
+                    </div>
+</div>
+              <hr>
+    <div class="card-deck"
+    *ngFor="let movie of movies | filter:filteredStatus:'name'">
+    <div class="col-xs-4">
+        <div class="card">
+          <img class="card-img-top img-responsive"
+          style="max-height: 400px; cursor: pointer"
+           [src]='movie.imagePath'
+            alt={{movie.name}}
+            [routerLink]="['/movie-details', movie.name]">
+          <div class="card-body">
+            <h4 class="card-title">{{movie.name}}
+                <span>
+                    <button mat-button>
+                        <mat-icon 
+                        (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">
+                        {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
+                        </mat-icon>
+                    </button>
+                    <button mat-button>
+                            <mat-icon 
+                            (click)="this.movie.seen= !this.movie.seen">
+                            {{this.movie.seen? "visibility": "visibility_off"}}
+                            </mat-icon>
+                        </button>
+                </span>
+            </h4>
+            <p class="card-text"><b>Release Date: </b>{{movie.releaseDate}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><b>Genre: </b>{{movie.genre}}
+        </small>           
+          </div>
+        </div>
+
+
+<!--         
+        <div class="row card-group"
+        >
+        <div class="col-xs-4"
         class="list-group-item clearfix"
-        *ngFor="let movie of movies"
+        *ngFor="let movie of movies | filter:filteredStatus:'name'"
         >
             <div class="pull-left">
                 <h4 cass="list-group-item-heading">{{movie.name}}</h4>
@@ -23,15 +78,20 @@
                 <img [src]="movie.imagePath"
                 alt="{{ movie.name }}"
                 class="img-responsive" 
-                style="max-height: 100px;">
+                style="max-height: 150px;">
                 <button mat-button>
                     <mat-icon 
                     (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList">
                     {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
                     </mat-icon>
                 </button>
+                <button mat-button>
+                        <mat-icon 
+                        (click)="this.movie.seen= !this.movie.seen">
+                        {{this.movie.seen? "visibility": "visibility_off"}}
+                        </mat-icon>
+                    </button>
             </span>
-        </a>
-    </div>
-</div>
-<hr>
+        </div>
+        </div>
+ -->

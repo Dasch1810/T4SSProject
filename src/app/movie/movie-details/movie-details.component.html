@@ -38,13 +38,23 @@
             Tickets<span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            <li><a href="https://kinepolis.be/nl/bioscopen/kinepolis-hasselt?main-section=presales">Kinepolis Hasselt</a></li>
+            <li><a href="https://kinepolis.be/nl/?main-section=presales">Kinepolis Hasselt</a></li>
             <li><a href="https://www.euroscoop.be/genk/">Euroscoop Genk</a></li>
             <li><a href="https://www.google.com/maps/search/bioscoop/@50.9631334,5.229416,11z/data=!3m1!4b1">Other theatres</a></li>
         </ul>
-        </div>
     </div>
-</div>
+            <button mat-button>
+                    <mat-icon 
+                    (click)="this.movie.addedToWatchList = !this.movie.addedToWatchList">
+                    {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
+                    </mat-icon>
+                </button>
+                <button mat-button>
+                        <mat-icon 
+                        (click)="this.movie.seen= !this.movie.seen">
+                        {{this.movie.seen? "visibility": "visibility_off"}}
+                        </mat-icon>
+                    </button>
 <div class="row">
         <div class="col-xs-12">
             <b>Genre:</b>

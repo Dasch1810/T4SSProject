@@ -23,9 +23,13 @@ import { MovieDetailsComponent } from './movie/movie-details/movie-details.compo
 import { DropdownDirective } from './movie/shared/dropdown.directive';
 import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie-trailer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { RegisterComponent } from './register';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
+import { MylistPipe } from './movie/pipes/mylist.pipe';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './movie/pipes/filter.pipe';
+import { MovieService } from './movie/movie.service';
+import { RatingComponent } from './movie/my-list/rating/rating.component';
 
 
 
@@ -45,7 +49,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     DropdownDirective,
     MovieTrailerComponent,
     ContactUsComponent,
-    RegisterComponent
+    AboutComponent,
+    WatchlistPipe,
+    MylistPipe,
+    FilterPipe,
+    RatingComponent,
+    
 
   ],
   imports: [
@@ -55,20 +64,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    routing
+    FormsModule
   ],
   exports: [
-    HomeComponent,
+    WatchlistPipe
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
-        // provider used to create fake backend
-        fakeBackendProvider
-  ],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
