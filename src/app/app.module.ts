@@ -1,14 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// used to create fake backend
-import { fakeBackendProvider } from './_helpers';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
-import { AlertComponent } from './_components';
-import { LoginComponent } from './login';
-import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HeaderComponent } from './header/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
@@ -30,17 +24,16 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
 import { RatingComponent } from './movie/my-list/rating/rating.component';
+import { AuthenticationService } from "./_services/AuthenticationService";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlertComponent,
     HeaderComponent,
     HomeComponent,
     MyProfileComponent,
-    LoginComponent,
     MovieComponent,
     MyListComponent,
     UpcomingMoviesComponent,
@@ -67,7 +60,8 @@ import { RatingComponent } from './movie/my-list/rating/rating.component';
     FormsModule
   ],
   exports: [
-    WatchlistPipe
+    WatchlistPipe,
+    AuthenticationService
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
