@@ -17,8 +17,20 @@ import { MovieDetailsComponent } from './movie/movie-details/movie-details.compo
 import { DropdownDirective } from './movie/shared/dropdown.directive';
 import { MovieTrailerComponent } from './movie/movie-details/movie-trailer/movie-trailer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule} from '@angular/forms';
+=======
+import { AboutComponent } from './about/about.component';
+import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
+import { MylistPipe } from './movie/pipes/mylist.pipe';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './movie/pipes/filter.pipe';
+import { MovieService } from './movie/movie.service';
+import { RatingComponent } from './movie/my-list/rating/rating.component';
+
+
+>>>>>>> 54e94f7bd904558419b4202cb26ab02cbd0f3c22
 
 @NgModule({
   declarations: [
@@ -33,7 +45,13 @@ import { FormsModule} from '@angular/forms';
     MovieDetailsComponent,
     DropdownDirective,
     MovieTrailerComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutComponent,
+    WatchlistPipe,
+    MylistPipe,
+    FilterPipe,
+    RatingComponent,
+    
 
   ],
   imports: [
@@ -43,10 +61,17 @@ import { FormsModule} from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     AppRoutingModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     FormsModule
+=======
+    FormsModule
   ],
-  providers: [],
+  exports: [
+    WatchlistPipe
+>>>>>>> 54e94f7bd904558419b4202cb26ab02cbd0f3c22
+  ],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

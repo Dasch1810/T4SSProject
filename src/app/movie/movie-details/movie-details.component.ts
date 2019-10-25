@@ -9,13 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
   styleUrls: ['./movie-details.component.css'],
-  providers: [MovieService],
 })
 export class MovieDetailsComponent implements OnInit {
   trailerShown:boolean = false;
   movies: Movie[];
   movie: Movie;
-
+  @Input() watchList: Movie[];
   showTrailer(){
     this.trailerShown= !this.trailerShown;
   }

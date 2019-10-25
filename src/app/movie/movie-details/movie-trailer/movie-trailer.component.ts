@@ -15,6 +15,7 @@ export class MovieTrailerComponent {
   constructor(private _sanitizer: DomSanitizer) { 
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/zAGVQLHvwOY');
     } 
+    
 }
 
 
