@@ -5,10 +5,13 @@
             <div class="pull-left">
                 <h4 cass="list-group-item-heading">{{movie.name}}</h4>
                 <p class="list-group-item-text"> <b>Genre:</b> {{movie.genre}}</p>
-                <p class="list-group-item-text"> <b>Release Date:</b> {{movie.releaseDate}}</p>
             </div>
             <div class="pull-right">
-                <div> {{ wasRatingClicked? "Please rate this movie":"Your rating:"}} </div>
-                <app-rating [rating]='movie.rating' [movieName]='movie.name' (ratingClick)='ratingComponentClick($event)'></app-rating>  
+                <app-rating
+                [movie]='movie'
+                [rating]='movie.rating' 
+                [movieName]='movie.name' 
+                (ratingClick)='ratingComponentClick($event)'
+                ></app-rating>  
           </div>
 </a>

@@ -23,7 +23,7 @@ import { MylistPipe } from './movie/pipes/mylist.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
-import { RatingComponent } from './movie/my-list/rating/rating.component';
+import { RatingComponent } from './movie/rating/rating.component';
 import { RegisterComponent } from './register';
 import { LoginComponent } from './login';
 import { AlertComponent } from './_components';

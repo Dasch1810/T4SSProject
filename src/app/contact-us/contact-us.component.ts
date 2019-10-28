@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { group } from '@angular/animations';
 
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -9,7 +10,7 @@ import { group } from '@angular/animations';
 })
 export class ContactUsComponent implements OnInit {
   reactiveForm: FormGroup;
-  submitted:boolean = false;
+  submitted: boolean = false;
   
   constructor(private formBuilder: FormBuilder) { }
   
@@ -20,14 +21,15 @@ export class ContactUsComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],
-      message:['', Validators.required] 
+      message:['', Validators.required],
+      
     });
   }
 
   get f(){return this.reactiveForm.controls; }
 
   onSubmit(){
-    console.log(this.f.errors);
+    console.log('reactiveForm' ,this.reactiveForm.value)
     this.submitted = true;
       if(this.reactiveForm.valid){
         return this.reactiveForm.reset(),alert('Message sent!');
