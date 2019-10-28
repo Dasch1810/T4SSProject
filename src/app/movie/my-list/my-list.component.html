@@ -7,11 +7,11 @@
                 <p class="list-group-item-text"> <b>Genre:</b> {{movie.genre}}</p>
             </div>
             <div class="pull-right">
-                <app-rating
-                [movie]='movie'
+                <app-rating 
                 [rating]='movie.rating' 
                 [movieName]='movie.name' 
                 (ratingClick)='ratingComponentClick($event)'
+                [movie]="movie"
                 ></app-rating>  
           </div>
 </a>

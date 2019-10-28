@@ -17,7 +17,6 @@ export class MovieTrailerComponent {
     } 
 
   ngOnInIt(){
-    console.log(this.movie.trailerUrl)
   }
 }
 

@@ -22,7 +22,6 @@ export class MyListComponent implements OnInit {
 
   ngOnInit() {
     this.movies = this.movieService.getMovies();
-    console.log(this.movie)
   }
 
   ratingComponentClick(clickObj: any): void {
