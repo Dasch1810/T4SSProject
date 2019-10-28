@@ -13,10 +13,11 @@ import { ActivatedRoute } from '@angular/router';
 export class MovieDetailsComponent implements OnInit {
   trailerShown:boolean = false;
   movies: Movie[];
-  movie: Movie;
-  @Input() watchList: Movie[];
+  @Input() movie: Movie;
+
   showTrailer(){
     this.trailerShown= !this.trailerShown;
+    console.log(this.movie.trailerUrl)
   }
   constructor(private movieService: MovieService,
     private route: ActivatedRoute) { }
