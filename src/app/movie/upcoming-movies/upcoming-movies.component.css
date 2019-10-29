@@ -8,3 +8,7 @@
 .blueIcon{
     color:blue;
 }
+img{
+max-height: 400px; 
+cursor: pointer;
+}

@@ -5,3 +5,7 @@ button{
 .redIcon{
     color:red;
 }
+img{
+    max-height: 400px;
+    margin: 20px;
+}

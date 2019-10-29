@@ -21,7 +21,6 @@ export class RatingComponent implements OnInit {
   ngOnInit() {
     this.inputName = this.movieName + '_rating';
     this.movies = this.movieService.getMovies();
-    console.log(this.movie)
   }
   onClick(rating: number): void {
     this.rating = rating;
