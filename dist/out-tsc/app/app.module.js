@@ -1,7 +1,6 @@
 import * as tslib_1 from "tslib";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
@@ -21,19 +20,22 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { WatchlistPipe } from './movie/pipes/watchlist.pipe';
 import { MylistPipe } from './movie/pipes/mylist.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
-import { RatingComponent } from './movie/my-list/rating/rating.component';
-import { AlertComponent } from './_components/alert.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login';
+import { RatingComponent } from './movie/rating/rating.component';
 import { RegisterComponent } from './register';
+import { LoginComponent } from './login';
+import { AlertComponent } from './_components';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SafeUrlPipe } from './movie/pipes/safe-url.pipe';
+import { AdultComponent } from './movie/adult/adult.component';
+import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helpers';
 let AppModule = class AppModule {
 };
 AppModule = tslib_1.__decorate([
     NgModule({
         declarations: [
-            LoginComponent,
             AppComponent,
             HeaderComponent,
             HomeComponent,
@@ -51,11 +53,11 @@ AppModule = tslib_1.__decorate([
             MylistPipe,
             FilterPipe,
             RatingComponent,
-            MatIconModule,
-            MatButtonModule,
-            AlertComponent,
             RegisterComponent,
-            MatIconModule,
+            LoginComponent,
+            AlertComponent,
+            SafeUrlPipe,
+            AdultComponent
         ],
         imports: [
             BrowserModule,
@@ -65,13 +67,18 @@ AppModule = tslib_1.__decorate([
             MatButtonModule,
             AppRoutingModule,
             FormsModule,
-            HttpClientModule,
             ReactiveFormsModule,
+            HttpClientModule
         ],
         exports: [
             WatchlistPipe
         ],
-        providers: [MovieService, HttpClient],
+        providers: [MovieService,
+            { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+            { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+            // provider used to create fake backend
+            fakeBackendProvider
+        ],
         bootstrap: [AppComponent]
     })
 ], AppModule);

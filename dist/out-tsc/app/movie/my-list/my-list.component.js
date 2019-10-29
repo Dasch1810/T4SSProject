@@ -8,9 +8,11 @@ let MyListComponent = class MyListComponent {
     ngOnInit() {
         this.movies = this.movieService.getMovies();
     }
-    ratingComponentClick() {
-        this.movie.rating = this.rating;
-        this.wasRatingClicked = true;
+    ratingComponentClick(clickObj) {
+        const ratedMovie = this.movies.find(((i) => i.ratedMovie === clickObj.movieName));
+        if (!!ratedMovie) {
+            this.ratingClicked = clickObj.rating;
+        }
     }
 };
 tslib_1.__decorate([

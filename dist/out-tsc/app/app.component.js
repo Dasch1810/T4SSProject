@@ -4,6 +4,7 @@ let AppComponent = class AppComponent {
     constructor(router, authenticationService) {
         this.router = router;
         this.authenticationService = authenticationService;
+        this.loggedIn = true;
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
     logout() {

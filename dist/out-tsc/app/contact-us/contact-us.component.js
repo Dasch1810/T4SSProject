@@ -12,12 +12,12 @@ let ContactUsComponent = class ContactUsComponent {
             name: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
             subject: ['', Validators.required],
-            message: ['', Validators.required]
+            message: ['', Validators.required],
         });
     }
     get f() { return this.reactiveForm.controls; }
     onSubmit() {
-        console.log(this.f.errors);
+        console.log('reactiveForm', this.reactiveForm.value);
         this.submitted = true;
         if (this.reactiveForm.valid) {
             return this.reactiveForm.reset(), alert('Message sent!');

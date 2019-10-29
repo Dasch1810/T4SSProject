@@ -18,7 +18,7 @@ let MovieDetailsComponent = class MovieDetailsComponent {
 };
 tslib_1.__decorate([
     Input()
-], MovieDetailsComponent.prototype, "watchList", void 0);
+], MovieDetailsComponent.prototype, "movie", void 0);
 MovieDetailsComponent = tslib_1.__decorate([
     Component({
         selector: 'app-movie-details',
