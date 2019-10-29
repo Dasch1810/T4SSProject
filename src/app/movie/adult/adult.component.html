@@ -1,1 +1,25 @@
 <H1>You disgusting PIG !</H1> 
+<div *ngIf="adult1">
+<tr>
+    <td>
+        <iframe 
+        width="1024" 
+        height="768" 
+        [src]= "safeURL"
+        frameborder="0" 
+        allowfullscreen>
+        </iframe>
+    <td>
+</td>
+</div>
+
+<div *ngIf="!adult1">
+    <h2> Are you sure you are over 18? </h2>
+    <button class="btn btn-primary"
+    (click)="validate1()">
+        Yes
+    </button>
+    <button class="btn btn-primary">
+        No
+    </button>
+</div>
