@@ -25,12 +25,11 @@ import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
 import { RatingComponent } from './movie/rating/rating.component';
 import { RegisterComponent } from './register';
-import { LoginComponent } from '../app/login';
 import { AlertComponent } from './_components';
 import { HttpClientModule } from '@angular/common/http';
 import { SafeUrlPipe } from './movie/pipes/safe-url.pipe';
 import { AdultComponent } from './movie/adult/adult.component';
-import { LoginModule } from '../app/login/login.module';
+import { LoginModule } from '../login/login.module';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { DashboardPageModule } from './dashboard-page/dashboard-page.module';
 import {NeedAuthGuard} from './auth.guard';
@@ -39,10 +38,6 @@ const appRoutes: Routes = [
     path: 'dashboard',
     component: DashboardPageComponent,
     canActivate: [NeedAuthGuard]
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   },
 ];
 
@@ -66,11 +61,9 @@ const appRoutes: Routes = [
     FilterPipe,
     RatingComponent,
     RegisterComponent,
-    LoginComponent,
     AlertComponent,
     SafeUrlPipe,
     AdultComponent,
-    LoginModule
     
 
   ],

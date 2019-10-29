@@ -1,6 +1,6 @@
 ﻿import {Component} from '@angular/core';
-import {ApiService} from '../api.service';
-import {CustomerService} from '../customer.service';
+import {ApiService} from '../app/api.service';
+import {CustomerService} from '../app/customer.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -10,8 +10,8 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent {
 
-  email = 'peter@klaven';
-  password = 'cityslicka';
+  email = 'angelo@cinema8';
+  password = 'Cinema8';
 
   constructor(private api: ApiService, private customer: CustomerService, private router: Router) {
   }

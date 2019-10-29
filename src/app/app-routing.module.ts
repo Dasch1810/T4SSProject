@@ -7,7 +7,7 @@ import { WatchlistComponent } from './movie/watchlist/watchlist.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './login';
+import { LoginComponent } from '../login';
 import { RegisterComponent } from './register';
 
 const routes: Routes = [
