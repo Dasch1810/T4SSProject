@@ -26,20 +26,13 @@ import { MovieService } from './movie/movie.service';
 import { RatingComponent } from './movie/rating/rating.component';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
-import { HttpClientModule } from '@angular/common/http';
+import { fakeBackendProvider } from './_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { SafeUrlPipe } from './movie/pipes/safe-url.pipe';
 import { AdultComponent } from './movie/adult/adult.component';
-import { LoginModule } from '../login/login.module';
-import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
-import { DashboardPageModule } from './dashboard-page/dashboard-page.module';
-import {NeedAuthGuard} from './auth.guard';
-const appRoutes: Routes = [
-  {
-    path: 'dashboard',
-    component: DashboardPageComponent,
-    canActivate: [NeedAuthGuard]
-  },
-];
+import { NeedAuthGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -64,6 +57,7 @@ const appRoutes: Routes = [
     AlertComponent,
     SafeUrlPipe,
     AdultComponent,
+    LoginComponent,
     
 
   ],
@@ -76,16 +70,18 @@ const appRoutes: Routes = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    LoginModule,
-    DashboardPageModule
-
+    HttpClientModule
   ],
   exports: [
     WatchlistPipe
   ],
-  providers: [MovieService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { };
