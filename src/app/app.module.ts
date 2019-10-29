@@ -29,6 +29,7 @@ import { LoginComponent } from './login';
 import { AlertComponent } from './_components';
 import { HttpClientModule } from '@angular/common/http';
 import { SafeUrlPipe } from './movie/pipes/safe-url.pipe';
+import { AdultComponent } from './movie/adult/adult.component';
 
 
 
@@ -54,7 +55,8 @@ import { SafeUrlPipe } from './movie/pipes/safe-url.pipe';
     RegisterComponent,
     LoginComponent,
     AlertComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    AdultComponent
     
 
   ],

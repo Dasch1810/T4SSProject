@@ -9,6 +9,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
+import { AdultComponent } from './movie/adult/adult.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'adult', component: AdultComponent}
 ];
 
 @NgModule({
