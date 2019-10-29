@@ -28,7 +28,7 @@
             alt={{movie.name}}
             [routerLink]="['/movie-details', movie.name]">
           <div class="card-body">
-            <h4 class="card-title">{{movie.name}}
+            <h4 class="card-title">{{movie.name}} </h4>
                 <span>
                     <button mat-button>
                         <mat-icon 
@@ -45,7 +45,6 @@
                             </mat-icon>
                         </button>
                 </span>
-            </h4>
             <p class="card-text"><b>Release Date: </b>{{movie.releaseDate}}</p>
           </div>
           <div class="card-footer">

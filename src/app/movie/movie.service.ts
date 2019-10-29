@@ -44,7 +44,85 @@ export class MovieService {
             true,
             0,
             'https://www.youtube.com/embed/Zi4LMpSDccc'
+        ),
+        new Movie(
+            "Charlie's Angels",
+            'Action',
+            '30/10/2019',
+            'https://m.media-amazon.com/images/M/MV5BZDAzOTYxY2YtNzBmNi00YmE5LTk0NTktN2YwNTNiNGZjNWIzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            "When a young systems engineer blows the whistle on a dangerous technology, Charlie's Angels are called into action, putting their lives on the line to protect us all.",
+            false,
+            false,
+            0,
+            'https://www.youtube.com/embed/RSUq4VfWfjE'
+        ),
+        new Movie(
+            'The Good Liar',
+            'Thriller',
+            '27/11/2019',
+            'https://m.media-amazon.com/images/M/MV5BN2VhNTY5ZTUtYzc1NC00NjUyLWI1NDQtYWE3YmJlNjQ3OGVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            'Career con artist Roy Courtnay can hardly believe his luck when he meets well-to-do widow Betty McLeish online. As Betty opens her home and life to him, Roy is surprised to find himself caring about her, turning what should be a cut-and-dry swindle into the most treacherous tightrope walk of his life.',
+            true,
+            false,
+            0,
+            'https://www.youtube.com/embed/ljKzFGpPHhw'
+        ),
+        new Movie(
+            'Last Christmas',
+            'Comedy',
+            '7/11/2019',
+            'https://m.media-amazon.com/images/M/MV5BNTQ4ZmY0NjgtYzVhNy00NzhiLTk3YTYtNzM1MTdjM2VhZDA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            "Kate is a young woman subscribed to bad decisions. Her last date with disaster? That of having accepted to work as Santa's elf for a department store. However, she meets Tom there. Her life takes a new turn. For Kate, it seems too good to be true.",
+            false,
+            true,
+            0,
+            'https://www.youtube.com/embed/z9CEIcmWmtA'
+        ),
+        new Movie(
+            'Jumanji: The Next Level',
+            'Action',
+            '12/12/2019',
+            'https://m.media-amazon.com/images/M/MV5BODgzZTJjMDItNTNhMy00Y2ViLWFiM2EtODRmMzc2Y2Y3N2E3XkEyXkFqcGdeQXVyODQxMTI4MjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            "A team of friends return to Jumanji to rescue one of their own but discover that nothing is as they expect. The players need to brave parts unknown, from arid deserts to snowy mountains, in order to escape the world's most dangerous game.",
+            true,
+            true,
+            0,
+            'https://www.youtube.com/embed/rBxcF-r9Ibs'
+        ),
+        new Movie(
+            'Midway',
+            'Action',
+            '14/11/2019',
+            'https://m.media-amazon.com/images/M/MV5BMGVkNGMyMGEtMDNmOC00ZGYyLWEzOTItODdjMzRlZTk4MzUwXkEyXkFqcGdeQXVyODM2Njg2OTg@._V1_SY1000_SX800_AL_.jpg',
+            "The story of the Battle of Midway, told by the leaders and the sailors who fought it.",
+            true,
+            false,
+            0,
+            'https://www.youtube.com/embed/BfTYY_pac8o'
+        ),
+        new Movie(
+            '21 Bridges',
+            'Action',
+            '21/11/2019',
+            'https://m.media-amazon.com/images/M/MV5BYTg4YzEzNDQtZDAxOS00M2YyLTljZWEtNjk4YTc4NDM2NTBhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,562,1000_AL_.jpg',
+            "A disgraced detective in the NYPD is given a shot at redemption.",
+            false,
+            false,
+            0,
+            'https://www.youtube.com/embed/BVZDhunTrYA'
+        ),
+        new Movie(
+            'Star Wars: The Rise of Skywalker',
+            'Fantasy',
+            '18/12/2019',
+            'https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SY1000_CR0,0,675,1000_AL_.jpg',
+            "The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.",
+            true,
+            false,
+            0,
+            'https://www.youtube.com/embed/8Qn_spdM5Zg'
         )
+
       ];
 
       getMovies(){
