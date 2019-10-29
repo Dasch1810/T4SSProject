@@ -17,17 +17,14 @@ export class MovieDetailsComponent implements OnInit {
 
   showTrailer(){
     this.trailerShown= !this.trailerShown;
-    console.log(this.movie.trailerUrl)
   }
   constructor(private movieService: MovieService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
     var name="Something has gone wrong"
-    this.route.params.subscribe(params => name = params.name);
-   
+    this.route.params.subscribe(params => name = params.name); 
     this.movie = this.movieService.getMovieByName(name)
-
     this.movies = this.movieService.getMovies();
   }
 

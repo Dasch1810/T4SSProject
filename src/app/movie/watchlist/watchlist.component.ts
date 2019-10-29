@@ -16,13 +16,12 @@ export class WatchlistComponent implements OnInit {
   constructor(private movieService: MovieService){}
 
   selectRandomMovie(){
-
     this.randomMovies = this.movies.filter(movie => {
       return movie.addedToWatchList === true
     })
-  
     this.randomMovie = this.randomMovies[Math.floor(Math.random()*this.randomMovies.length)]
   }
+  
   ngOnInit() {
     this.movies = this.movieService.getMovies();
   }
