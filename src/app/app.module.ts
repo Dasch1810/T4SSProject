@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
@@ -25,13 +25,26 @@ import { FilterPipe } from './movie/pipes/filter.pipe';
 import { MovieService } from './movie/movie.service';
 import { RatingComponent } from './movie/rating/rating.component';
 import { RegisterComponent } from './register';
-import { LoginComponent } from './login';
+import { LoginComponent } from '../app/login';
 import { AlertComponent } from './_components';
 import { HttpClientModule } from '@angular/common/http';
 import { SafeUrlPipe } from './movie/pipes/safe-url.pipe';
 import { AdultComponent } from './movie/adult/adult.component';
-
-
+import { LoginModule } from '../app/login/login.module';
+import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+import { DashboardPageModule } from './dashboard-page/dashboard-page.module';
+import {NeedAuthGuard} from './auth.guard';
+const appRoutes: Routes = [
+  {
+    path: 'dashboard',
+    component: DashboardPageComponent,
+    canActivate: [NeedAuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+];
 
 @NgModule({
   declarations: [
@@ -56,7 +69,8 @@ import { AdultComponent } from './movie/adult/adult.component';
     LoginComponent,
     AlertComponent,
     SafeUrlPipe,
-    AdultComponent
+    AdultComponent,
+    LoginModule
     
 
   ],
@@ -69,7 +83,11 @@ import { AdultComponent } from './movie/adult/adult.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    LoginModule,
+    DashboardPageModule
+
   ],
   exports: [
     WatchlistPipe
