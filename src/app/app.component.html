@@ -1,11 +1,10 @@
 <!-- nav -->
-<body>
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
-</nav>
+</nav> -->
 
 <!-- main app container -->
 <!-- <div class="jumbotron">
@@ -19,17 +18,18 @@
 </div> -->
 
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
+<app-header *ngIf="currentUser && loggedIn"
+[loggedIn]= 'loggedIn'></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-                <alert></alert>
+            <alert></alert>
             <router-outlet></router-outlet>
             <!-- <app-movie></app-movie> -->
         </div>
     </div>
 </div>
-</body>
+
 
 
 

@@ -1,5 +1,6 @@
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default"
+    *ngIf="loggedIn">
         <div class="container-fluid">
                 <div class="navbar-header">
                         <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
@@ -25,7 +26,7 @@
                                 <li><a routerLink="contact-us">Contact us</a></li>
                                 <li><a routerLink="about">Who are we?</a></li>
                             </ul>
-                    <li routerLinkActive ="active"><a routerLink="login">Log Out</a></li>
+                    <li routerLinkActive ="active"><a routerLink="login" (click)="logout()">Log Out</a></li>
                 </ul>
             </div>
         </div>

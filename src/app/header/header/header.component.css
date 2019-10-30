@@ -22,3 +22,6 @@ float: left;
 .red{
   color: red;
 }
+a{
+  cursor: pointer;
+}

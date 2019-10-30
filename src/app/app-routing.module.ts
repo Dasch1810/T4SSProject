@@ -10,10 +10,11 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AdultComponent } from './movie/adult/adult.component';
+import { AuthGuard } from './_guards';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
-  {path:'upcoming-movies',component: UpcomingMoviesComponent},
+  {path:'upcoming-movies',component: UpcomingMoviesComponent, canActivate: [AuthGuard] },
   {path: 'my-list', component: MyListComponent},
   {path: 'movie-details/:name', component: MovieDetailsComponent,pathMatch: 'full'},
   {path: 'watchlist', component: WatchlistComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'adult', component: AdultComponent}
+  {path: 'adult', component: AdultComponent},
+  {path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
