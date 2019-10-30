@@ -10,7 +10,7 @@ export class AdultComponent implements OnInit {
   public safeURL: SafeResourceUrl;
   adult1: boolean= false;
   tooYoung= false;
-  babyImgUrl= "https://storage.googleapis.com/www-24baby-cloud/2017/01/Baby-met-veel-haren.jpg"
+  babyImgUrl= "http://www.quickmeme.com/img/15/15abdb2bae3ef9602995a1e3619f93350cdebfce133b501a4d714b97746e11a4.jpg"
   question= true;
   constructor(private _sanitizer: DomSanitizer){
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/3UjuYtgMDIg?autoplay=1&loop=1&start=17');

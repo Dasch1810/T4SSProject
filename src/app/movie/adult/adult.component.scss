@@ -1,11 +1,16 @@
 img{
-    max-height: 400px
+    max-height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
     margin: 3px;
 }
 .container {
-    text-align: center;
-    
+    text-align: center;  
+}
+p{
+    font-size: 2em;
 }
