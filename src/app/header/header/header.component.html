@@ -9,8 +9,8 @@
                       </div>
                       <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
                 <ul class="nav navbar-nav">
-                    <li routerLinkActive ="active"><a routerLink="upcoming-movies">Upcoming movies</a></li>
-                    <li routerLinkActive ="active" class="dropdown" appDropdown>
+                    <li routerLinkActive ="active-route"><a routerLink="upcoming-movies">Upcoming movies</a></li>
+                    <li routerLinkActive ="active-route" class="dropdown" appDropdown>
                             <a class="dropdown-toggle" role="button">My Movies<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a routerLink="watchlist">Watchlist</a></li>
@@ -19,13 +19,13 @@
                             </ul>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                        <li routerLinkActive ="active" class="dropdown" appDropdown>
+                        <li routerLinkActive ="active-route" class="dropdown" appDropdown>
                         <a class="dropdown-toggle" role="button">Contact<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                                 <li><a routerLink="contact-us">Contact us</a></li>
                                 <li><a routerLink="about">Who are we?</a></li>
                             </ul>
-                    <li routerLinkActive ="active"><a routerLink="login" (click)="logout()">Log Out</a></li>
+                    <li routerLinkActive ="active-route"><a routerLink="login" (click)="logout()">Log Out</a></li>
                 </ul>
             </div>
         </div>
