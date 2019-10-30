@@ -5,6 +5,6 @@ $primary-text: #fff;
 
 body {
   font: 100% $font-stack;
-  background:url(require('abstract.jpg'));
-  color: $primary-text;
+  background: $primary-color;
+  color: $primary-text
 }
