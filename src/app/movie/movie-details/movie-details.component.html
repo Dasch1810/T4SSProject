@@ -18,31 +18,32 @@
         [movie] = movie>
     </app-movie-trailer>
         <ng-template #showButton>
-    <button class="btn btn-primary" (click)=showTrailer()>Show trailer</button>
+    <button class="btn btn-danger" (click)=showTrailer()>Show trailer</button>
         </ng-template>
     </div>
 </div>
+<div class="container">
+<div class="row">
 
-<div class="row">
-    <div class="col-xs-12">
-        <h1>{{movie.name}}</h1>
-    </div>
+                    <div class="col-sm-12">
+                </div>
+                <div class="btn-group"
+                appDropdown>
+                    <button 
+                    type="button" 
+                    class="btn btn-warning">
+                    Tickets<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="https://kinepolis.be/nl/?main-section=presales">Kinepolis Hasselt</a></li>
+                    <li><a href="https://www.euroscoop.be/genk/">Euroscoop Genk</a></li>
+                    <li><a href="https://www.google.com/maps/search/bioscoop/@50.9631334,5.229416,11z/data=!3m1!4b1">Other theatres</a></li>
+                </ul>
+        </div>
 </div>
+<h1>{{movie.name}}</h1>
 <div class="row">
-    <div class="col-xs-12">
-        <div class="btn-group"
-        appDropdown>
-            <button 
-            type="button" 
-            class="btn btn-primary">
-            Tickets<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-            <li><a href="https://kinepolis.be/nl/?main-section=presales">Kinepolis Hasselt</a></li>
-            <li><a href="https://www.euroscoop.be/genk/">Euroscoop Genk</a></li>
-            <li><a href="https://www.google.com/maps/search/bioscoop/@50.9631334,5.229416,11z/data=!3m1!4b1">Other theatres</a></li>
-        </ul>
-    </div>
+    <div class="col-sm-12">
             <button mat-button>
                     <mat-icon 
                     (click)="this.movie.addedToWatchList = !this.movie.addedToWatchList"
@@ -57,24 +58,18 @@
                         {{this.movie.seen? "visibility": "visibility_off"}}
                         </mat-icon>
                     </button>
+                </div>
+            </div>
 <div class="row">
         <div class="col-xs-12">
             <b>Genre:</b>
-        </div>
-    </div>
-    <div class="row">
-            <div class="col-xs-12">
                 {{movie.genre}}
             </div>
         </div>
 <div class="row">
     <div class="col-xs-12">
         <b>Release Date:</b>
-    </div>
-</div>
-<div class="row">
-        <div class="col-xs-12">
-            {{movie.releaseDate}}
+            <p>{{movie.releaseDate}}</p>
         </div>
     </div>
     <div class="row">
@@ -88,3 +83,4 @@
                 </div>
             </div>
         </div>
+    </div>
