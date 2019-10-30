@@ -1,0 +1,31 @@
+
+.red{
+    color: red;
+    
+  }
+  a{
+    cursor: pointer;
+  }
+  
+  .navbar-brand {
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  .navbar-nav {
+    font-size: 18px;
+  }
+  .active-route{
+    background-color: rgb(255, 85, 85)
+  }
+  nav{
+    background-color: #cacaca;
+  }
+  .container{
+      width: 70%;
+      text-align: center;
+  }
+  p{
+    font-size: 2em;
+  }

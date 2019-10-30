@@ -13,9 +13,9 @@
                 <li routerLinkActive ="active" class="dropdown" appDropdown>
                         <a class="dropdown-toggle" role="button">Founders<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a (click)="changeAboutRoute('senne')">Senne</a></li>
                             <li><a (click)="changeAboutRoute('angelo')">Angelo</a></li>
                             <li><a (click)="changeAboutRoute('damy')">Damy</a></li>
+                            <li><a (click)="changeAboutRoute('senne')">Senne</a></li>
                         </ul>
                         </li>
 </ul>
@@ -24,24 +24,34 @@
 </nav>
 <div [ngSwitch]="aboutRoute">
     <div *ngSwitchCase="'aboutUs'">
-        <h3>We are a group of 3 people, coming from the Train4SmartServices(T4SS). T4SS is a project on Corda Campus in Hasselt,
+        <div class="container">
+        <p>We are a group of 3 people, coming from the Train4SmartServices(T4SS). T4SS is a project on Corda Campus in Hasselt,
              where people coming from all backgrounds are studying to become software engineers, or data scientists.
             
             The three of us decided to fully dedicate ourselves to becoming sofware engineers, and while we still have a lot of work to do, we're well on our
-        way to achieving our goal!</h3>
+        way to achieving our goal!</p>
+    </div>
     </div>
     <div *ngSwitchCase="'thisProject'">
-        <H3>Starting October 2019, we were given the assignment of creating an Angular app in small groups.
+            <div class="container">
+        <p>Starting October 2019, we were given the assignment of creating an Angular app in small groups.
              Cinem8 is a project we decided on making, based on our shared interest for movies.
-            Although it's far from a complete app, we're proud of what we've built. </H3>
+            Although it's far from a complete app, we're proud of what we've built. </p>
+            </div>
     </div>
     <div *ngSwitchCase="'damy'">
+            <div class="container">
         <p>Damy is an amazing person</p>
+        </div>
     </div>
     <div *ngSwitchCase="'angelo'">
+            <div class="container">
         <p>Angelo is amazing person</p>
+        </div>
     </div>
     <div *ngSwitchCase="'senne'">
-        <p>Senne is also in a person</p>
+            <div class="container">
+        <p>Senne is also a person</p>
+        </div>
     </div>
 </div>
