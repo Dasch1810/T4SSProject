@@ -20,7 +20,7 @@
               <hr>
     <div class="card-deck"
     *ngFor="let movie of movies | filter:filteredStatus:'name'">
-    <div class="col-xs-4">
+    <div class="col-sm-4">
         <div class="card">
           <img class="card-img-top img-responsive"
            [src]='movie.imagePath'
@@ -28,22 +28,26 @@
             [routerLink]="['/movie-details', movie.name]">
           <div class="card-body">
             <h4 class="card-title">{{movie.name}} </h4>
-                <span>
+                <div class="row"><span>
                     <button mat-button>
                         <mat-icon 
                         (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList"
-                        [ngClass]="{redIcon: this.movie.addedToWatchList}">
+                        [ngClass]="{redIcon: this.movie.addedToWatchList}"
+                        >
                         {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
                         </mat-icon>
                     </button>
                     <button mat-button>
                             <mat-icon 
                             (click)="this.movie.seen= !this.movie.seen"
-                            [ngClass]="{blueIcon: this.movie.seen}">
+                            [ngClass]="{blueIcon: this.movie.seen}"
+                            responsive
+                            >
                             {{this.movie.seen? "visibility": "visibility_off"}}
                             </mat-icon>
                         </button>
                 </span>
+
             <p class="card-text"><b>Release Date: </b>{{movie.releaseDate}}</p>
           </div>
           <div class="card-footer">

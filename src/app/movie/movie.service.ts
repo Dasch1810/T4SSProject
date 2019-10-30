@@ -79,7 +79,7 @@ export class MovieService {
             'https://www.youtube.com/embed/z9CEIcmWmtA?autoplay=1'
         ),
         new Movie(
-            'Jumanji: The Next Level',
+            'Jumanji 2',
             'Action',
             '12/12/2019',
             'https://m.media-amazon.com/images/M/MV5BODgzZTJjMDItNTNhMy00Y2ViLWFiM2EtODRmMzc2Y2Y3N2E3XkEyXkFqcGdeQXVyODQxMTI4MjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
@@ -112,7 +112,7 @@ export class MovieService {
             'https://www.youtube.com/embed/BVZDhunTrYA?autoplay=1'
         ),
         new Movie(
-            'Star Wars: The Rise of Skywalker',
+            'Star Wars',
             'Fantasy',
             '18/12/2019',
             'https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SY1000_CR0,0,675,1000_AL_.jpg',
