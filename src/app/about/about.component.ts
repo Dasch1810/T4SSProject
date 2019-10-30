@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  collapsed= false;
   constructor() { }
+  aboutRoute:string ="aboutUs"
 
   ngOnInit() {
   }
-
+changeAboutRoute(route:string){
+  this.aboutRoute= route;
+}
 }

@@ -16,21 +16,20 @@ import { HomeComponent } from './home';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path:'upcoming-movies',component: UpcomingMoviesComponent, canActivate: [AuthGuard] },
-  {path: 'my-list', component: MyListComponent},
-  {path: 'movie-details/:name', component: MovieDetailsComponent, pathMatch: 'full'},
-  {path: 'watchlist', component: WatchlistComponent},
-  {path: 'my-profile', component: MyProfileComponent},
-  {path: 'contact-us', component: ContactUsComponent},
-  {path: 'about', component: AboutComponent},
+  {path: 'my-list', component: MyListComponent, canActivate: [AuthGuard] },
+  {path: 'movie-details/:name', component: MovieDetailsComponent, pathMatch: 'full', canActivate: [AuthGuard] },
+  {path: 'watchlist', component: WatchlistComponent, canActivate: [AuthGuard] },
+  {path: 'my-profile', component: MyProfileComponent, canActivate: [AuthGuard] },
+  {path: 'contact-us', component: ContactUsComponent, canActivate: [AuthGuard] },
+  {path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'adult', component: AdultComponent},
-  {path: 'register', component: RegisterComponent },
-  {path: 'home', component: HomeComponent}
+  {path: 'adult', component: AdultComponent, canActivate: [AuthGuard] },
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{onSameUrlNavigation: 'reload'})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule] 
 })
 export class AppRoutingModule { }
