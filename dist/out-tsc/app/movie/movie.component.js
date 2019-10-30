@@ -16,7 +16,7 @@ MovieComponent = tslib_1.__decorate([
     Component({
         selector: 'app-movie',
         templateUrl: './movie.component.html',
-        styleUrls: ['./movie.component.css'],
+        styleUrls: ['./movie.component.scss'],
         providers: [MovieService],
     })
 ], MovieComponent);

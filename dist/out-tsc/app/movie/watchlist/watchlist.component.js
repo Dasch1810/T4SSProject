@@ -22,7 +22,7 @@ WatchlistComponent = tslib_1.__decorate([
     Component({
         selector: 'app-watchlist',
         templateUrl: './watchlist.component.html',
-        styleUrls: ['./watchlist.component.css'],
+        styleUrls: ['./watchlist.component.scss'],
     })
 ], WatchlistComponent);
 export { WatchlistComponent };

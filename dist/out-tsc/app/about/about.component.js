@@ -9,7 +9,7 @@ AboutComponent = tslib_1.__decorate([
     Component({
         selector: 'app-about',
         templateUrl: './about.component.html',
-        styleUrls: ['./about.component.css']
+        styleUrls: ['./about.component.scss']
     })
 ], AboutComponent);
 export { AboutComponent };

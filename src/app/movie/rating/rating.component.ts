@@ -6,7 +6,7 @@ import { MovieService } from '../movie.service';
 @Component({
   selector: 'app-rating',
   templateUrl: '../rating/rating.component.html',
-  styleUrls: ['../rating/rating.component.css']
+  styleUrls: ['../rating/rating.component.scss']
 })
 export class RatingComponent implements OnInit {
   @Input() rating: number;

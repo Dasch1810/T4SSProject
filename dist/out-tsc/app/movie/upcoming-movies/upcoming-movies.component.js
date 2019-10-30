@@ -18,7 +18,7 @@ UpcomingMoviesComponent = tslib_1.__decorate([
     Component({
         selector: 'app-upcoming-movies',
         templateUrl: './upcoming-movies.component.html',
-        styleUrls: ['./upcoming-movies.component.css'],
+        styleUrls: ['./upcoming-movies.component.scss'],
     })
 ], UpcomingMoviesComponent);
 export { UpcomingMoviesComponent };

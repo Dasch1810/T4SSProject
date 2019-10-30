@@ -28,7 +28,7 @@ RatingComponent = tslib_1.__decorate([
     Component({
         selector: 'app-rating',
         templateUrl: '../rating/rating.component.html',
-        styleUrls: ['../rating/rating.component.css']
+        styleUrls: ['../rating/rating.component.scss']
     })
 ], RatingComponent);
 export { RatingComponent };

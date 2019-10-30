@@ -4,7 +4,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-adult',
   templateUrl: './adult.component.html',
-  styleUrls: ['./adult.component.css']
+  styleUrls: ['./adult.component.scss']
 })
 export class AdultComponent implements OnInit {
   public safeURL: SafeResourceUrl;

@@ -5,7 +5,7 @@ import { MovieService } from '../movie.service';
 @Component({
   selector: 'app-upcoming-movies',
   templateUrl: './upcoming-movies.component.html',
-  styleUrls: ['./upcoming-movies.component.css'],
+  styleUrls: ['./upcoming-movies.component.scss'],
 })
 export class UpcomingMoviesComponent implements OnInit {
   @Input() movie: Movie;

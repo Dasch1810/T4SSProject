@@ -23,7 +23,7 @@ AdultComponent = tslib_1.__decorate([
     Component({
         selector: 'app-adult',
         templateUrl: './adult.component.html',
-        styleUrls: ['./adult.component.css']
+        styleUrls: ['./adult.component.scss']
     })
 ], AdultComponent);
 export { AdultComponent };

@@ -23,7 +23,7 @@ MovieDetailsComponent = tslib_1.__decorate([
     Component({
         selector: 'app-movie-details',
         templateUrl: './movie-details.component.html',
-        styleUrls: ['./movie-details.component.css'],
+        styleUrls: ['./movie-details.component.scss'],
     })
 ], MovieDetailsComponent);
 export { MovieDetailsComponent };
