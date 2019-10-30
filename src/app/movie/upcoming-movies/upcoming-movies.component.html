@@ -28,11 +28,12 @@
             [routerLink]="['/movie-details', movie.name]">
           <div class="card-body">
             <h4 class="card-title text-center">{{movie.name}} </h4>
-                <span>
+                <span class="buttons">
                     <button mat-button>
                         <mat-icon 
                         (click)="this.movie.addedToWatchList= !this.movie.addedToWatchList"
                         [ngClass]="{redIcon: this.movie.addedToWatchList}"
+                        class="buttonWatchList"
                         >
                         {{this.movie.addedToWatchList? "favorite": "favorite_border"}}
                         </mat-icon>
@@ -41,7 +42,7 @@
                             <mat-icon 
                             (click)="this.movie.seen= !this.movie.seen"
                             [ngClass]="{blueIcon: this.movie.seen}"
-                            responsive
+                            class="buttonSeen"
                             >
                             {{this.movie.seen? "visibility": "visibility_off"}}
                             </mat-icon>
