@@ -12,7 +12,7 @@ export class MovieService {
         true,
         false,
         0,
-        'https://www.youtube.com/embed/zAGVQLHvwOY'),
+        'https://www.youtube.com/embed/zAGVQLHvwOY?autoplay=1;playsinline=0'),
     
         new Movie('Gemini man',
         'Action',
@@ -22,7 +22,7 @@ export class MovieService {
         false,
         true,
         0,
-        'https://www.youtube.com/embed/AbyJignbSj0'),
+        'https://www.youtube.com/embed/AbyJignbSj0?autoplay=1'),
         new Movie(
             'Doctor Sleep',
             'Horror',
@@ -32,7 +32,7 @@ export class MovieService {
             false,
             true,
             0,
-            'https://www.youtube.com/embed/2msJTFvhkU4'
+            'https://www.youtube.com/embed/2msJTFvhkU4?autoplay=1'
         ),
         new Movie(
             'Frozen 2',
@@ -43,7 +43,7 @@ export class MovieService {
             true,
             true,
             0,
-            'https://www.youtube.com/embed/Zi4LMpSDccc'
+            'https://www.youtube.com/embed/Zi4LMpSDccc?autoplay=1'
         ),
         new Movie(
             "Charlie's Angels",
@@ -54,7 +54,7 @@ export class MovieService {
             false,
             false,
             0,
-            'https://www.youtube.com/embed/RSUq4VfWfjE'
+            'https://www.youtube.com/embed/RSUq4VfWfjE?autoplay=1'
         ),
         new Movie(
             'The Good Liar',
@@ -65,7 +65,7 @@ export class MovieService {
             true,
             false,
             0,
-            'https://www.youtube.com/embed/ljKzFGpPHhw'
+            'https://www.youtube.com/embed/ljKzFGpPHhw?autoplay=1'
         ),
         new Movie(
             'Last Christmas',
@@ -76,7 +76,7 @@ export class MovieService {
             false,
             true,
             0,
-            'https://www.youtube.com/embed/z9CEIcmWmtA'
+            'https://www.youtube.com/embed/z9CEIcmWmtA?autoplay=1'
         ),
         new Movie(
             'Jumanji: The Next Level',
@@ -87,7 +87,7 @@ export class MovieService {
             true,
             true,
             0,
-            'https://www.youtube.com/embed/rBxcF-r9Ibs'
+            'https://www.youtube.com/embed/rBxcF-r9Ibs?autoplay=1'
         ),
         new Movie(
             'Midway',
@@ -98,7 +98,7 @@ export class MovieService {
             true,
             false,
             0,
-            'https://www.youtube.com/embed/BfTYY_pac8o'
+            'https://www.youtube.com/embed/BfTYY_pac8o?autoplay=1'
         ),
         new Movie(
             '21 Bridges',
@@ -109,7 +109,7 @@ export class MovieService {
             false,
             false,
             0,
-            'https://www.youtube.com/embed/BVZDhunTrYA'
+            'https://www.youtube.com/embed/BVZDhunTrYA?autoplay=1'
         ),
         new Movie(
             'Star Wars: The Rise of Skywalker',
@@ -120,7 +120,7 @@ export class MovieService {
             true,
             false,
             0,
-            'https://www.youtube.com/embed/8Qn_spdM5Zg'
+            'https://www.youtube.com/embed/8Qn_spdM5Zg?autoplay=1'
         )
 
       ];

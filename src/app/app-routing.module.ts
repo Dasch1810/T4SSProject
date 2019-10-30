@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path:'upcoming-movies',component: UpcomingMoviesComponent, canActivate: [AuthGuard] },
   {path: 'my-list', component: MyListComponent},
-  {path: 'movie-details/:name', component: MovieDetailsComponent,pathMatch: 'full'},
+  {path: 'movie-details/:name', component: MovieDetailsComponent, pathMatch: 'full'},
   {path: 'watchlist', component: WatchlistComponent},
   {path: 'my-profile', component: MyProfileComponent},
   {path: 'contact-us', component: ContactUsComponent},
