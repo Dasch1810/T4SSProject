@@ -1,9 +1,24 @@
-<h1>Hi {{currentUser.firstName}}, welcome to Cinem8 !</h1>
-<h2> The website that helps you out with a lot of movie-watching-related mumbo jumbo !</h2>
+<h1 class="title"> Cinem8 </h1>
+<div class="container" *ngIf="!continue">
+    <h2>Hello {{currentUser.firstName}}, welcome to cinem8</h2>
+    <button class="btn btn-danger"
+    (click)="continueToSite()">Continue</button>
+</div>
+
+
+
+<div class="container2" *ngIf="continue">
+
+
 <h3>All registered users:</h3>
-<ul>
+
+<div class="list-type1">
+    <ol>
     <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+         <a>{{user.username}} ({{user.firstName}} {{user.lastName}})<button mat-button
+            (click)="deleteUser(user.id)"
+            class="pull-right">
+            <mat-icon>delete</mat-icon></button></a>
+    </ol>
+    </div>
+</div>
