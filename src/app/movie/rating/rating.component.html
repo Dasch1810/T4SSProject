@@ -1,5 +1,5 @@
 <fieldset class="rating">
-    <div> {{ rating !==0? "Your rating:":"Please rate this movie"}} </div>
+    <div><p> {{ rating !==0? "Your rating:":"Please rate this movie"}} </p></div>
     <input type="radio" [name]="inputName" value="5" [checked]="rating===5" />
     <label title="Rocks!" (click)='onClick(5)'>5 stars</label>
   

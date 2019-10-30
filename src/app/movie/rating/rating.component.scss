@@ -26,17 +26,21 @@
 }
 
 .rating > input:checked ~ label {
-    color: #f70;
+    color: rgb(255, 0, 0);
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: gold;
+    color: rgb(128, 0, 0);
 }
 
 
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
+    color: orange;
+}
+p{
+    font-size: 1.2em;
+    color: white;
 }
