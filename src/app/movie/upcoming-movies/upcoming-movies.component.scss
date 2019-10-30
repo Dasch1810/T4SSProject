@@ -11,9 +11,14 @@
 img{
 max-height: 400px; 
 cursor: pointer;
+margin: 0 auto;
 }
 
 .list-group-item-text {
     font-size: 17px;
     color: orange;
 }
+.card-footer{
+    text-align: center;
+}
+
