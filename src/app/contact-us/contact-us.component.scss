@@ -19,3 +19,29 @@ body{
 body .form-group{
     width: 150px;
 }
+.container{
+    width: 60%
+}
+input{
+    background-color: #cacaca;
+    color: rgb(167, 0, 0)
+}
+textarea{
+    background-color: #cacaca;
+    color: rgb(167, 0, 0)
+}
+select{
+    background-color: #cacaca;
+    color: rgb(167, 0, 0)
+}
+.btn-warning{
+    width: 40%;
+    margin: 3px;
+}
+.btn-danger{
+    width: 50%;
+    margin: 3px;
+}
+label{
+    font-size: 1.2em;
+}
