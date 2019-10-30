@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$primary-text: #fff;
+
+body {
+  font: 100% $font-stack;
+  background:url(require('abstract.jpg'));
+  color: $primary-text;
+}
