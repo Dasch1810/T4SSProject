@@ -12,13 +12,15 @@ import { User } from './_models';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentUser: User;
+  currentUser: User= null;
+
   constructor(
       private router: Router,
       private authenticationService: AuthenticationService
   ) {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
+
 
   logout() {
       this.authenticationService.logout();
