@@ -1,4 +1,5 @@
-<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()"
+*ngIf="!submitted">
 		
 		<div class="form-row">
 			<div class="form-group col">
@@ -50,8 +51,15 @@
 					</div>
                 </div>
                 <div class="form-group">
-                        <button onsubmit="onSubmit()" type="submit" class="btn btn-primary btn-md">Send Message</button>
-							
+                        <button onsubmit="onSubmit()" type="submit" class="btn btn-primary btn-md">Send Message</button>	
 						<button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>			
                 </div>
 		</form>
+<div *ngIf=submitted>
+		Thanks for sending us a message, you slut
+<div class="row">
+	<div class="col-xs-12">
+		<button class="btn btn-primary" routerLink = '../home'>Home</button>
+	</div>
+</div>
+</div>

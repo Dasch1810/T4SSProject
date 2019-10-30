@@ -11,7 +11,7 @@ import { group } from '@angular/animations';
 export class ContactUsComponent implements OnInit {
   reactiveForm: FormGroup;
   submitted: boolean = false;
-  
+
   constructor(private formBuilder: FormBuilder) { }
   
 
@@ -29,12 +29,10 @@ export class ContactUsComponent implements OnInit {
   get f(){return this.reactiveForm.controls; }
 
   onSubmit(){
-    console.log('reactiveForm' ,this.reactiveForm.value)
     this.submitted = true;
       if(this.reactiveForm.valid){
         return this.reactiveForm.reset(),alert('Message sent!');
       }else(this.submitted=false,alert("Please fill in form properly"));
-    
     
   }
   onReset(){
