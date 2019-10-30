@@ -11,6 +11,7 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AdultComponent } from './movie/adult/adult.component';
 import { AuthGuard } from './_guards';
+import { HomeComponent } from './home';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'adult', component: AdultComponent},
   {path: 'register', component: RegisterComponent },
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
