@@ -9,7 +9,7 @@ import { MovieService } from '../movie.service';
 })
 export class UpcomingMoviesComponent implements OnInit {
   @Input() movie: Movie;
-  title: String = "Upcoming Movies"
+  title: String = "Coming soon"
   movies: Movie[] =  [];
   filteredStatus = '';
   constructor(private movieService: MovieService) { }

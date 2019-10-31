@@ -20,7 +20,8 @@ body .form-group{
     width: 150px;
 }
 .container{
-    width: 60%
+    width: 60%;
+    margin-top: 5%;
 }
 input{
     background-color: #cacaca;
@@ -35,11 +36,11 @@ select{
     color: rgb(167, 0, 0)
 }
 .btn-warning{
-    width: 40%;
+    width: 49%;
     margin: 3px;
 }
 .btn-danger{
-    width: 50%;
+    width: 49%;
     margin: 3px;
 }
 label{
@@ -51,4 +52,13 @@ label{
 .container2{
     text-align: center;
     margin: 25%
+}
+p{
+    float: right;
+    font-size: 2em;
+    margin-bottom: 0%;
+    margin-right: 3%;
+}
+hr{
+    margin-top: 1%;
 }

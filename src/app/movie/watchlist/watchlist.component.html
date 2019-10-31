@@ -1,4 +1,4 @@
-
+<div class="container">
   <button class="btn btn-danger"
             (click)="selectRandomMovie(movie)"
             *ngIf="!randomMovie; else suggestion">
@@ -20,6 +20,9 @@
     </button>
     </div>
 </ng-template>
+<div class="row">
+<p class="title">Watchlist</p>
+</div>
     <hr>
 <a
         class="list-group-item clearfix"
@@ -28,7 +31,6 @@
             <div class="pull-left">
                 <h4 class="list-group-item-heading">{{movie.name}}</h4>
                 <p class="list-group-item-text"> <b>Genre:</b> {{movie.genre}}</p>
-                <p class="list-group-item-text"> <b>Release Date:</b> {{movie.releaseDate}}</p>
             </div>
             <button mat-button
             class= "pull-right">
@@ -39,5 +41,6 @@
                     </mat-icon>
                 </button>
             </a>
+        </div>
 
             

@@ -1,4 +1,8 @@
 <div class="container">
+		<div class="row">
+				<p>Contact us</p>
+		</div>
+<hr>
 <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()"
 *ngIf="!submitted">
 		
@@ -6,7 +10,7 @@
 			<div class="form-group col">
 				<label>Title</label>
 					<select  formControlName="title" class="form-control" [ngClass]="{'is-invalid': submitted && f.title?.errors}">
-						<option value="blank"> </option>
+						<option value="" disabled selected>Select Title</option>
 						<option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                         <option value="Miss">Miss</option>

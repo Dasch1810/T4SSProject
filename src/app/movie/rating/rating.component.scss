@@ -1,6 +1,6 @@
 
 .rating {
-    float:left;
+    float:right;
 }
 
 .rating:not(:checked) > input {
@@ -26,12 +26,12 @@
 }
 
 .rating > input:checked ~ label {
-    color: rgb(255, 0, 0);
+    color: gold
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: rgb(128, 0, 0);
+    color: goldenrod;
 }
 
 

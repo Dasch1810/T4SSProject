@@ -17,7 +17,7 @@ export class MovieService {
         new Movie('Gemini man',
         'Action',
         '9/10/2019',
-        'https://i.iheart.com/v3/re/new_assets/5d8e12dc453ebf2886e79408?ops=max(650,0),quality(80)',
+        'https://m.media-amazon.com/images/M/MV5BNjI5OTNkMzUtZDYzYy00NWQ5LTg4YzYtZmZjZDI0MGQzNGY2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
         'An over-the-hill hitman faces off against a younger clone of himself.',
         false,
         true,
