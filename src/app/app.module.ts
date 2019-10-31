@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 import { MyListComponent } from './movie/my-list/my-list.component'; 
-import { MyProfileComponent } from './my-profile/my-profile.component';
 import { UpcomingMoviesComponent } from './movie/upcoming-movies/upcoming-movies.component';
 import { WatchlistComponent } from './movie/watchlist/watchlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,7 +38,6 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helper
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    MyProfileComponent,
     MovieComponent,
     MyListComponent,
     UpcomingMoviesComponent,
