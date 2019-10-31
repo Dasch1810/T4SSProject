@@ -8,7 +8,6 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./upcoming-movies.component.scss'],
 })
 export class UpcomingMoviesComponent implements OnInit {
-  @Input() movie: Movie;
   title: String = "Coming soon"
   movies: Movie[] =  [];
   filteredStatus = '';

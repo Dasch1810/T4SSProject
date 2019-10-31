@@ -16,7 +16,6 @@ export class MyListComponent implements OnInit {
   movieNameRatingClicked: string;
   wasRatingClicked:boolean = false;
   ratedMovie: Movie;
-  @Input() movie: Movie;
   
   constructor(private movieService: MovieService) { }
 

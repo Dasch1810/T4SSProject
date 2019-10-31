@@ -13,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MovieDetailsComponent implements OnInit {
   trailerShown:boolean = false;
   movies: Movie[];
-  @Input() movie: Movie;
+  movie: Movie;
 
   showTrailer(){
     this.trailerShown= !this.trailerShown;
